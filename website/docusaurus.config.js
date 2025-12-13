@@ -10,7 +10,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'https://pradeepkg.github.io/RSA/img/iconmonstr-arrow-31.svg',
 
   // Set the production url of your site here
   url: 'https://razerexp.github.io',
@@ -68,6 +68,15 @@ const config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      ({
+        hashed: true,
+      }),
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -77,14 +86,14 @@ const config = {
         title: 'My Site',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'https://pradeepkg.github.io/RSA/img/iconmonstr-arrow-31.svg',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'DataReach',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
@@ -101,7 +110,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'DataReach',
                 to: '/docs/intro',
               },
             ],
@@ -137,7 +146,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Chandan Reddy. All rights reserved.<br/>Unauthorized use and/or duplication of this material without express and written permission is strictly prohibited.`,
       },
       prism: {
         theme: prismThemes.github,
