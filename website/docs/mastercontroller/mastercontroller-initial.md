@@ -49,7 +49,7 @@ Before proceeding with the installation, you must stage the necessary installati
 
 Create a temporary directory `/tmp/DRbinaries/` and upload the following DataReach packages to it. These files are typically provided by RSA Professional Services:
 
-*   `MasterController_<Version>.zip` (Master Controller Installer)
+*   `MasterController_<Version>.zip` (Mastercontroller Installer)
 *   `Credential_Provider_CyberArkREST_<Version>.zip` (Credential Provider Plugin)
 *   `Agent_Windows_<Version>.zip` (Windows Agent)
 *   `Agent_Unix_<Version>.tar` (Unix Agent)

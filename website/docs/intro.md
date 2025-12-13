@@ -33,12 +33,12 @@ Agents deployed remotely; Dedicated Oracle database provided by org; Mastercontr
 ## Installation Pre-Requisites
 
 ### Operating System
-*   **Master Controller**: Virtual or physical **Linux** host. Can be the G&L server.
-*   **Agent**: Virtual or physical **Linux** or **Windows** host.
+*   **Mastercontroller**: Virtual or physical **Unix** host. Can be the G&L server.
+*   **Agent**: Virtual or physical **Unix** or **Windows** host.
 
 ### Hardware Requirements
 
-| Resource | Database | Master Controller / Agent |
+| Resource | Database | Mastercontroller / Agent |
 | :--- | :--- | :--- |
 | **RAM** | Min 32 GB | 4 GB (MC) / 2 GB (Agent) dedicated |
 | **CPU** | Min 2 quad-core | Dual core processor |
@@ -48,7 +48,7 @@ Agents deployed remotely; Dedicated Oracle database provided by org; Mastercontr
 
 *   **21 (FTP)**: FTP connections.
 *   **22 (SSH)**: SSH connections.
-*   **10443 (HTTPS)**: Agent to Master Controller communication.
+*   **10443 (HTTPS)**: Agent to Mastercontroller communication.
 
 ## Intended Audience
 

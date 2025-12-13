@@ -80,9 +80,9 @@ Find the `export DR_ENV_PATH` line and update it:
 export DR_ENV_PATH="<PASTE_GENERATED_VALUE_HERE>"
 ```
 
-## Primary Master Controller Configuration File - setenv.sh
+## Primary Mastercontroller Configuration File - setenv.sh
 
-This file specifies environment variables for the Master Controller's web server (Tomcat).
+This file specifies environment variables for the Mastercontroller's web server (Tomcat).
 Path: `/opt/rsa/datareach/mastercontroller/tomcat/tomcat-datareach/bin/setenv.sh`
 
 | Parameter Name | Description |
@@ -128,7 +128,7 @@ Copy the **encrypted output string** (not the plain text password) and update th
 
 ## Generate DataReach Certificates
 
-Secure communication between the Master Controller and Agents relies on mutual TLS authentication using Java Keystores (JKS).
+Secure communication between the Mastercontroller and Agents relies on mutual TLS authentication using Java Keystores (JKS).
 
 **Step 1: Backup Default Certificates**
 
@@ -142,13 +142,13 @@ mv /opt/rsa/datareach/mastercontroller/certificates/mastercontroller.jks /opt/rs
 
 **Step 2: Generate New Certificates**
 
-Run the certificate generation commands for the Root CA, Master Controller, and all required Agents.
+Run the certificate generation commands for the Root CA, Mastercontroller, and all required Agents.
 *Ensure to use the same keystore password encrypted in the previous step (default example: `init1234`).*
 
 ```bash
 ./drutils.sh certs generateRoot -p init1234
 
-# Master Controller Identity
+# Mastercontroller Identity
 ./drutils.sh certs generateAgent -n mastercontroller -p init1234 -ca-password init1234
 
 # Remote Agent Identities
