@@ -1,0 +1,8 @@
+{
+    "label": "Remote Agents",
+    "position": 4,
+    "link": {
+        "type": "generated-index",
+        "description": "Configuration guides for Remote Agents"
+    }
+}
