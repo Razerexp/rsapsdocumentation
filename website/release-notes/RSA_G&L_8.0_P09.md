@@ -37,7 +37,7 @@ These enhancements help to identify problematic requests before they impact oper
 | **[ACM-132733](https://rsa.atlassian.net/browse/ACM-132733)** | Application logs in `T_AV_APPLICATION_LOG` can now be capped. Flags: `EnableMaxRowsThresholdForAppLogsTable` (default false) and `MaxRowsThresholdForAppLogsTable` (default 1000000). |
 | **[ACM-133225](https://rsa.atlassian.net/browse/ACM-133225)** | Built-in mechanism to validate disk space before applying patches and automatic clean-up for old patch files. |
 | **[ACM-132598](https://rsa.atlassian.net/browse/ACM-132598)** | Run IDs for Duplicate User/Account removal task now display the number of duplicates removed. |
-| **[ACM-132591](https://rsa.atlassian.net/browse/ACM-132591), [ACM-129665](https://rsa.atlassian.net/browse/ACM-129665), [ACM-129664](https://rsa.atlassian.net/browse/ACM-129664), [ACM-129662](https://rsa.atlassian.net/browse/ACM-129662), [ACM-120380](https://rsa.atlassian.net/browse/ACM-120380)** | In Cluster environment, Schedule/Thread/Database/Memory/Performance information now lists data from all Nodes. |
+| **[ACM-132591](https://rsa.atlassian.net/browse/ACM-132591)<br/>[ACM-129665](https://rsa.atlassian.net/browse/ACM-129665)<br/>[ACM-129664](https://rsa.atlassian.net/browse/ACM-129664)<br/>[ACM-129662](https://rsa.atlassian.net/browse/ACM-129662)<br/>[ACM-120380](https://rsa.atlassian.net/browse/ACM-120380)** | In Cluster environment, Schedule/Thread/Database/Memory/Performance information now lists data from all Nodes. |
 | **[ACM-132049](https://rsa.atlassian.net/browse/ACM-132049)** | Improvements to Advanced Dashboards (drill-down filters, component headers). |
 | **[ACM-131970](https://rsa.atlassian.net/browse/ACM-131970)** | Default Log Refresh Scheduler created to purge logs older than 7 days if not configured. |
 
@@ -45,7 +45,7 @@ These enhancements help to identify problematic requests before they impact oper
 
 | Issue ID | Reference | Description |
 | :--- | :--- | :--- |
-| **SF-02710144** | [ACM-135173](https://rsa.atlassian.net/browse/ACM-135173), [ACM-133566](https://rsa.atlassian.net/browse/ACM-133566) | Active Directory Server: Add Account to Group Capability now works successfully when Group exists under `CN=Users`. |
+| **SF-02710144** | [ACM-135173](https://rsa.atlassian.net/browse/ACM-135173)<br/>[ACM-133566](https://rsa.atlassian.net/browse/ACM-133566) | Active Directory Server: Add Account to Group Capability now works successfully when Group exists under `CN=Users`. |
 | **SF-02699615** | [ACM-134363](https://rsa.atlassian.net/browse/ACM-134363) | Custom attributes now display properly grouped together by the defined separator. |
 | **SF-02699967** | [ACM-134313](https://rsa.atlassian.net/browse/ACM-134313) | Deadlocks on `T_AV_CHANGE_REQUESTS_MST` no longer occur due to database statistics operation. |
 | **SF-02695164** | [ACM-134155](https://rsa.atlassian.net/browse/ACM-134155) | RESTful Connector: Multiple values with double quotes (e.g., `"dev", "admin"`) are transmitted correctly without extra slashes. |
@@ -54,7 +54,7 @@ These enhancements help to identify problematic requests before they impact oper
 | **[ACM-133940](https://rsa.atlassian.net/browse/ACM-133940)** | - | Importing SoD rules works successfully if review definition names match between environments. |
 | **SF-02695060** | [ACM-133924](https://rsa.atlassian.net/browse/ACM-133924) | Java Code-Based Connector: Fixed loading issue for MySQL and DB2 drivers. |
 | **SF-02694718** | [ACM-133835](https://rsa.atlassian.net/browse/ACM-133835) | Generic Database Connector: Backslashes in SQL queries (`domain\username`) are no longer removed. |
-| **SF-02680856, SF-02672369** | [ACM-133833](https://rsa.atlassian.net/browse/ACM-133833), [ACM-132362](https://rsa.atlassian.net/browse/ACM-132362) | Archival activity completes successfully, and history tables display archived data. |
+| **SF-02680856<br/>SF-02672369** | [ACM-133833](https://rsa.atlassian.net/browse/ACM-133833)<br/>[ACM-132362](https://rsa.atlassian.net/browse/ACM-132362) | Archival activity completes successfully, and history tables display archived data. |
 | **SF-02684231** | [ACM-133783](https://rsa.atlassian.net/browse/ACM-133783) | Provisioning Node now shows a comprehendible reason for Cancelling instead of "Unexpected Exception". |
 | **[ACM-133782](https://rsa.atlassian.net/browse/ACM-133782)** | - | Generic REST Collector: Handles empty/null values in request header to avoid NullPointerException. |
 | **SF-02690670** | [ACM-133589](https://rsa.atlassian.net/browse/ACM-133589) | Responsibilities automatically assigned to Business/Technical Owner are no longer missed. |
@@ -62,7 +62,7 @@ These enhancements help to identify problematic requests before they impact oper
 | **SF-02687943** | [ACM-133492](https://rsa.atlassian.net/browse/ACM-133492) | App Metadata Collector changes to Business Sources now set `modified_by` to System Admin. |
 | **SF-02688775** | [ACM-133483](https://rsa.atlassian.net/browse/ACM-133483) | Encryption of passwords in `domain.xml` (WildFly) in Docker Container working successfully. |
 | **SF-02685548** | [ACM-133476](https://rsa.atlassian.net/browse/ACM-133476) | Active Directory Connector: Added support for multiple CNs in DN. |
-| **-** | [ACM-132230](https://rsa.atlassian.net/browse/ACM-132230), [ACM-132201](https://rsa.atlassian.net/browse/ACM-132201), [ACM-128998](https://rsa.atlassian.net/browse/ACM-128998) | Library Updates: Log4j2 (2.21.0), SLF4j (2.0.17), JSTL replaced with Jakarta. |
+| **-** | [ACM-132230](https://rsa.atlassian.net/browse/ACM-132230)<br/>[ACM-132201](https://rsa.atlassian.net/browse/ACM-132201)<br/>[ACM-128998](https://rsa.atlassian.net/browse/ACM-128998) | Library Updates: Log4j2 (2.21.0), SLF4j (2.0.17), JSTL replaced with Jakarta. |
 
 ## Known Issues
 
