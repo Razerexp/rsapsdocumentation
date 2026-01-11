@@ -40,6 +40,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'datareach',
           routeBasePath: 'datareach',
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
