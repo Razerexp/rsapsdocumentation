@@ -1,0 +1,53 @@
+/* Container for the table to ensure scrolling on small screens */
+.tableContainer {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.releaseTable {
+    width: 100%;
+    border-collapse: collapse;
+    display: table !important;
+    /* Override Docusaurus strict styles if needed */
+}
+
+.releaseTable th,
+.releaseTable td {
+    border: 1px solid var(--ifm-table-border-color);
+    padding: var(--ifm-table-cell-padding);
+    vertical-align: top;
+}
+
+.releaseTable th {
+    background-color: var(--ifm-table-head-background);
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Column 1: Issue ID */
+.colIssueId {
+    width: 1%;
+    white-space: nowrap;
+}
+
+/* Column 2: Reference */
+.colReference {
+    width: 1%;
+    white-space: nowrap;
+    font-weight: bold;
+    /* Requirement: Bold Reference Column */
+}
+
+/* Column 3: Description */
+.colDescription {
+    /* Auto width */
+    text-align: justify;
+    /* Requirement: Justified Text */
+}
+
+/* Ensure code blocks within the table wrap */
+.releaseTable pre,
+.releaseTable code {
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+}

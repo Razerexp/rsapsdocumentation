@@ -1,7 +1,10 @@
 ---
 title: RSA G&L 8.0 P09
 sidebar_label: v8.0 P09
+sidebar_position: 2
 ---
+
+<div className="text--justify">
 
 # RSA Governance & Lifecycle 8.0 Patch 09
 
@@ -70,10 +73,60 @@ These enhancements help to identify problematic requests before they impact oper
 | :--- | :--- | :--- |
 | **[ACM-135700](https://rsa.atlassian.net/browse/ACM-135700)** | After creating the first CAS application, the Refresh token does not work once the application is up after applying the latest P09 patch. | Restart the ACM application for the Refresh token to work. |
 
-## Platform Matrix & Support
-*   **Application Server:** WildFly 24.0.1 (Qualified), WebLogic 14.1.1.0, WebSphere 9.0.5.21
-*   **JDK:** AdoptOpenJDK 1.8.0_472, Oracle JDK 1.8.0_471, IBM JDK 1.8.0_471
-*   **OS:** SUSE (SLES 12 SP5, SLES 15 SP7), Red Hat (RHEL 8.10, RHEL 9.6)
-*   **RHEL 9.4+ Support:** Supported for RSA G&L 8.0 P05+. Must install on RHEL 8 first, then upgrade OS.
+## Platform Support Matrix
 
-*See PDF for full prerequisites and installation details.*
+The latest application server and JDK version have been certified for this release.
+
+| | RSA Governance & Lifecycle<br/>Software Bundle | Software Only<br/>(WebLogic or WebSphere) | RSA Governance & Lifecycle<br/>Virtual Application | Container |
+| :--- | :--- | :--- | :--- | :--- |
+| **Application Server Version** | | | | |
+| WildFly 24.0.1 Included | Qualified | N/A | Qualified | Qualified |
+| WebLogic 14.1.1.0 | N/A | Qualified | N/A | N/A |
+| WebSphere 9.0.5.21 | N/A | Qualified | N/A | N/A |
+| **JDK Version Certified** | | | | |
+| AdoptOpenJDK 1.8.0_472 | Qualified | N/A | Qualified | N/A |
+| Oracle JDK 1.8.0_471<br/>(WebLogic) | N/A | Qualified | N/A | N/A |
+| IBM JDK 1.8.0_471<br/>(WebSphere) | N/A | Qualified | N/A | N/A |
+| **Operating Systems** | | | | |
+| SUSE (SLES 12 SP5, and SLES 15 SP7) | Qualified | N/A | Qualified | N/A |
+| Red Hat (RHEL 8.10 and RHEL 9.6) | Qualified | N/A | N/A | N/A |
+
+<small>*RSA Governance & Lifecycle version 8.0 P05 and later software bundle is now supported on RHEL 9.4+ (must install on RHEL 8 first, then upgrade).*</small>
+
+## Product Support with Operating System
+
+RSA Governance & Lifecycle version 8.0 P05 and later software bundle is now supported on RHEL 9.4+, however, RSA Governance & Lifecycle 8.0 must first be installed on RHEL 8, complete all the pre-requisites described below, and then upgrade the operating system from RHEL 8 to RHEL 9.4+.
+
+### Installing RSA Governance & Lifecycle on Red Hat 9.4+
+
+#### Before upgrading your system from RHEL 8 to RHEL 9.4
+Ensure the following steps are completed:
+*   Apply patch 8.0.0 P05 and later successfully on the existing RHEL 8 system.
+*   Apply the latest Appliance Updater for Oracle Database to the existing RHEL 8 system containing the RSA-provided database.
+
+#### After completing the upgrade to RHEL 9.4
+Assure the following:
+*   The RSA-supplied JDK is installed and available.
+*   The following packages are required for Red Hat Enterprise Linux 9.4 environments and may need to be explicitly installed in addition to the operating system.
+
+| Package | Package |
+| :--- | :--- |
+| binutils-2.35.2-43.el9.x86_64 | make-4.3-8.el9.x86_64 |
+| gcc-11.4.1-3.el9.x86_64 | sysstat-12.5.4-7.el9.x86_64 |
+| gcc-c++-11.4.1-3.el9.x86_64 | javapackages-tools |
+| glibc-2.34-100.el9.x86_64 | lcms2 |
+| glibc-devel-2.34-100.el9.x86_64 | syslinux |
+| ksh | dejavu-sans-fonts |
+| libaio-0.3.111-13.el9.x86_64 | dejavu-serif-fonts |
+| libaio-devel-0.3.111-13.el9.x86_64 | dejavu-sans-mono-fonts |
+| libgcc-11.4.1-3.el9.x86_64 | fontconfig |
+| libstdc++-11.4.1-3.el9.x86_64 | zip |
+| libstdc++-devel-11.4.1-3.el9.x86_64 | unzip |
+| libXi-1.7.10-8.el9.x86_64 | libns |
+| libXtst-1.2.3-16.el9.x86_64 | |
+
+Once all the prerequisites have been completed as described above, start RSA Governance & Lifecycle Services.
+
+</div>
+
+

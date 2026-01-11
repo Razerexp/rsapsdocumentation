@@ -94,12 +94,14 @@ table th:first-child {
   /* Shrink to fit content */
 }
 
-/* Fix "Fixed Issues" table Reference column wrapping */
-h2#fixed-issues+table td:nth-child(2),
-h2#fixed-issues+table th:nth-child(2) {
+/* Fix "Fixed Issues" table Reference column wrapping and styling */
+h2[id^="fixed-issues"]+table td:nth-child(2),
+h2[id^="fixed-issues"]+table th:nth-child(2) {
   white-space: nowrap;
   width: 1%;
   /* Shrink to fit content */
+  font-weight: bold;
+  /* Bold the reference IDs */
 }
 
 /* Wrap code blocks inside tables */
@@ -114,9 +116,11 @@ table div[class^="codeBlockContainer"] code {
   max-width: 100%;
 }
 
-/* Specific fix for Known Issues table alignment */
+/* Specific fix for Known Issues table alignment and general justification */
 table td {
   vertical-align: top;
+  text-align: justify;
+  /* Justify align all text */
 }
 
 
