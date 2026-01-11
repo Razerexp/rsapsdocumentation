@@ -40,6 +40,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: 'datareach',
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -95,6 +96,7 @@ const config = {
             position: 'left',
             label: 'DataReach',
           },
+          { to: '/release-notes', label: 'Release Notes', position: 'left' },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/facebook/docusaurus',
@@ -111,7 +113,7 @@ const config = {
             items: [
               {
                 label: 'DataReach',
-                to: '/docs/intro',
+                to: '/datareach/intro',
               },
             ],
           },
