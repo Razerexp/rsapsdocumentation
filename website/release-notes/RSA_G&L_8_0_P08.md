@@ -150,6 +150,20 @@ The latest application server and JDK version have been certified for this relea
 | SUSE (SLES 12 SP5, and SLES 15 SP7) | Qualified | N/A | Qualified | N/A |
 | Red Hat (RHEL 8.10 and RHEL 9.6) | Qualified | N/A | N/A | N/A |
 
+## Prerequisites for Applying Patch (v8.0 P07 or Later)
+
+When using a customer-supplied Oracle Database, or RSA-Supplied Database installed remotely, update the AVUSER and AVCSUSER schema as follows:
+
+1.  Log in as **SYS** user (or another user with **SYSDBA** privilege) in SQLPLUS (or another database tool like SQL Developer).
+2.  Run the following script to grant permission on the following objects:
+
+```sql
+GRANT EXECUTE ON SYS.DBMS_CRYPTO TO AVUSER;
+GRANT EXECUTE ON SYS.DBMS_LOCK TO AVCSUSER;
+```
+
+> If the AVUSER schema name is other than AVUSER, replace AVUSER with the appropriate schema name.
+
 ## Product Support with Operating System
 
 RSA Governance & Lifecycle version 8.0 P05 and later software bundle is now supported on RHEL 9.4+, however, RSA Governance & Lifecycle 8.0 must first be installed on RHEL 8, complete all the pre-requisites described below, and then upgrade the operating system from RHEL 8 to RHEL 9.4+.
