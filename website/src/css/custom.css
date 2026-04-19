@@ -129,6 +129,20 @@ table td {
   /* Justify align all text */
 }
 
+/* Force Known Issues tables to not exceed 100% layout and split 2nd & 3rd columns equally */
+h2[id^="known-issues"] ~ table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+h2[id^="known-issues"] ~ table td:nth-child(2),
+h2[id^="known-issues"] ~ table th:nth-child(2),
+h2[id^="known-issues"] ~ table td:nth-child(3),
+h2[id^="known-issues"] ~ table th:nth-child(3) {
+  width: 50%;
+  word-wrap: break-word;
+}
+
 
 /* Sidebar compactness */
 .menu__link {
