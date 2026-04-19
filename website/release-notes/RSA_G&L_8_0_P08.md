@@ -44,37 +44,37 @@ This beta feature is available to all customers for testing. If you test the new
 
 ## New Features
 
-| Issue ID | Description |
-| :--- | :--- |
-| **[ACM-132884](https://rsa.atlassian.net/browse/ACM-132884)** | **Export Data to PDF**: In the new user review interface, review items table can now be exported to PDF in addition to existing support for CSV. |
-| **[ACM-132297](https://rsa.atlassian.net/browse/ACM-132297)** | **Email Timeout**: New Mail Polling Connection Timeout and Mail Polling Read Timeout settings have been added under the **Approval Email Server section > Email > Settings**. Default timeout is 180 seconds. |
-| **[ACM-132103](https://rsa.atlassian.net/browse/ACM-132103)<br/>[ACM-132101](https://rsa.atlassian.net/browse/ACM-132101)<br/>[ACM-129940](https://rsa.atlassian.net/browse/ACM-129940)** | **Password Decryption for Generic REST Collector Metadata**: Supports password decryption only within the same environment, or across environments when encryption keys are also transferred. |
-| **[ACM-132086](https://rsa.atlassian.net/browse/ACM-132086)** | **AES for AFX**: In AFX, Blowfish algorithm is replaced with AES algorithm to encrypt or decrypt data. |
-| **[ACM-131997](https://rsa.atlassian.net/browse/ACM-131997)** | **AFX Spring Upgrade**: Spring jar upgraded to v5.3.39, Spring Security jar to v5.8.16. |
-| **[ACM-131760](https://rsa.atlassian.net/browse/ACM-131760)<br/>[ACM-131331](https://rsa.atlassian.net/browse/ACM-131331)<br/>[ACM-131255](https://rsa.atlassian.net/browse/ACM-131255)<br/>[ACM-131188](https://rsa.atlassian.net/browse/ACM-131188)<br/>[ACM-121468](https://rsa.atlassian.net/browse/ACM-121468)** | **Graph API for Incoming Email**: Integrated Microsoft Graph API protocol for reading incoming approval emails. |
-| **[ACM-131695](https://rsa.atlassian.net/browse/ACM-131695)<br/>[ACM-131444](https://rsa.atlassian.net/browse/ACM-131444)<br/>[ACM-131221](https://rsa.atlassian.net/browse/ACM-131221)<br/>[ACM-130976](https://rsa.atlassian.net/browse/ACM-130976)** | **Remove Duplicate Users/Accounts**: Users can view duplicate Users or Accounts on the UI under **Collectors > Duplicate Data Cleanup**. |
-| **[ACM-131635](https://rsa.atlassian.net/browse/ACM-131635)** | **Workflow Upgrade**: Workpoint version has been updated to 4.50.16. |
-| **[ACM-131151](https://rsa.atlassian.net/browse/ACM-131151)<br/>[ACM-131129](https://rsa.atlassian.net/browse/ACM-131129)** | **Pending Change Request Notifications**: New Custom Event "Pending Change Requests" triggers notifications based on threshold. |
-| **[ACM-131083](https://rsa.atlassian.net/browse/ACM-131083)** | **System Indicator Discrepancies**: Accurate counts for orphaned watches and pending verification items under Admin > Workflow > Monitoring. |
-| **[ACM-130042](https://rsa.atlassian.net/browse/ACM-130042)** | **Expanded Multi-Value Attributes for LDAP**: Supports multi-valued attributes for Creation and Update (Account/Group) in single operation. |
-| **[ACM-129653](https://rsa.atlassian.net/browse/ACM-129653)** | **Performance Improvement**: Session information for nodes with cluster communication issues is no longer retrieved for Performance Summary. |
-| **[ACM-126520](https://rsa.atlassian.net/browse/ACM-126520)<br/>[ACM-126518](https://rsa.atlassian.net/browse/ACM-126518)** | **Spring Upgrade**: Spring libraries and Spring-core on ACM/AFX upgraded. |
+| Issue ID | Reference | Description |
+| :--- | :--- | :--- |
+| - | [ACM-132884](https://rsa.atlassian.net/browse/ACM-132884) | **Export Data to PDF**: In the new user review interface, review items table can now be exported to PDF in addition to existing support for CSV. |
+| - | [ACM-132297](https://rsa.atlassian.net/browse/ACM-132297) | **Email Timeout**: New Mail Polling Connection Timeout and Mail Polling Read Timeout settings have been added under the **Approval Email Server section > Email > Settings**. Default timeout is 180 seconds. |
+| - | [ACM-132103](https://rsa.atlassian.net/browse/ACM-132103)<br/>[ACM-132101](https://rsa.atlassian.net/browse/ACM-132101)<br/>[ACM-129940](https://rsa.atlassian.net/browse/ACM-129940) | **Password Decryption for Generic REST Collector Metadata**: Supports password decryption only within the same environment, or across environments when encryption keys are also transferred. |
+| - | [ACM-132086](https://rsa.atlassian.net/browse/ACM-132086) | **AES for AFX**: In AFX, Blowfish algorithm is replaced with AES algorithm to encrypt or decrypt data. |
+| - | [ACM-131997](https://rsa.atlassian.net/browse/ACM-131997) | **AFX Spring Upgrade**: Spring jar upgraded to v5.3.39, Spring Security jar to v5.8.16. |
+| - | [ACM-131760](https://rsa.atlassian.net/browse/ACM-131760)<br/>[ACM-131331](https://rsa.atlassian.net/browse/ACM-131331)<br/>[ACM-131255](https://rsa.atlassian.net/browse/ACM-131255)<br/>[ACM-131188](https://rsa.atlassian.net/browse/ACM-131188)<br/>[ACM-121468](https://rsa.atlassian.net/browse/ACM-121468) | **Graph API for Incoming Email**: Integrated Microsoft Graph API protocol for reading incoming approval emails. |
+| - | [ACM-131695](https://rsa.atlassian.net/browse/ACM-131695)<br/>[ACM-131444](https://rsa.atlassian.net/browse/ACM-131444)<br/>[ACM-131221](https://rsa.atlassian.net/browse/ACM-131221)<br/>[ACM-130976](https://rsa.atlassian.net/browse/ACM-130976) | **Remove Duplicate Users/Accounts**: Users can view duplicate Users or Accounts on the UI under **Collectors > Duplicate Data Cleanup**. |
+| - | [ACM-131635](https://rsa.atlassian.net/browse/ACM-131635) | **Workflow Upgrade**: Workpoint version has been updated to 4.50.16. |
+| - | [ACM-131151](https://rsa.atlassian.net/browse/ACM-131151)<br/>[ACM-131129](https://rsa.atlassian.net/browse/ACM-131129) | **Pending Change Request Notifications**: New Custom Event "Pending Change Requests" triggers notifications based on threshold. |
+| - | [ACM-131083](https://rsa.atlassian.net/browse/ACM-131083) | **System Indicator Discrepancies**: Accurate counts for orphaned watches and pending verification items under Admin > Workflow > Monitoring. |
+| - | [ACM-130042](https://rsa.atlassian.net/browse/ACM-130042) | **Expanded Multi-Value Attributes for LDAP**: Supports multi-valued attributes for Creation and Update (Account/Group) in single operation. |
+| - | [ACM-129653](https://rsa.atlassian.net/browse/ACM-129653) | **Performance Improvement**: Session information for nodes with cluster communication issues is no longer retrieved for Performance Summary. |
+| - | [ACM-126520](https://rsa.atlassian.net/browse/ACM-126520)<br/>[ACM-126518](https://rsa.atlassian.net/browse/ACM-126518) | **Spring Upgrade**: Spring libraries and Spring-core on ACM/AFX upgraded. |
 
 ## Enhancements
 
-| Issue ID | Description |
-| :--- | :--- |
-| **[ACM-132029](https://rsa.atlassian.net/browse/ACM-132029)** | LDAP Connectors now support updating the CN and Distinguished Name attributes of Account/Group. |
-| **[ACM-131500](https://rsa.atlassian.net/browse/ACM-131500)** | SCIM Connector enhanced to NOT include version number in URL when SCIM Version is blank. |
-| **[ACM-131499](https://rsa.atlassian.net/browse/ACM-131499)** | SCIM Collector enhanced to NOT include version number in URL when Version is blank. |
-| **[ACM-130634](https://rsa.atlassian.net/browse/ACM-130634)** | Improved response time for Data Run information on History tab. |
-| **[ACM-130633](https://rsa.atlassian.net/browse/ACM-130633)<br/>[ACM-130632](https://rsa.atlassian.net/browse/ACM-130632)** | Improved response time for Approvals and Activities pages (lazy loading). |
-| **[ACM-130553](https://rsa.atlassian.net/browse/ACM-130553)** | Workpoint updated to 4.50.16; logs now display correct client protocol/host/port. |
-| **[ACM-130409](https://rsa.atlassian.net/browse/ACM-130409)** | Time spent on each rule action added to task progress table. |
-| **[ACM-130021](https://rsa.atlassian.net/browse/ACM-130021)<br/>[ACM-130015](https://rsa.atlassian.net/browse/ACM-130015)** | Improved response time for Request page, User Request tab, and Rules page. |
-| **[ACM-129368](https://rsa.atlassian.net/browse/ACM-129368)** | New flag `custom.EmailLogParallelOptimization` to optimize Email Log display performance. |
-| **[ACM-129338](https://rsa.atlassian.net/browse/ACM-129338)** | Enhanced Role page response time; unmodified membership rules don't change Role state. |
-| **[ACM-123379](https://rsa.atlassian.net/browse/ACM-123379)** | Rule Processing Status bar introduced. |
+| Issue ID | Reference | Description |
+| :--- | :--- | :--- |
+| - | [ACM-132029](https://rsa.atlassian.net/browse/ACM-132029) | LDAP Connectors now support updating the CN and Distinguished Name attributes of Account/Group. |
+| - | [ACM-131500](https://rsa.atlassian.net/browse/ACM-131500) | SCIM Connector enhanced to NOT include version number in URL when SCIM Version is blank. |
+| - | [ACM-131499](https://rsa.atlassian.net/browse/ACM-131499) | SCIM Collector enhanced to NOT include version number in URL when Version is blank. |
+| - | [ACM-130634](https://rsa.atlassian.net/browse/ACM-130634) | Improved response time for Data Run information on History tab. |
+| - | [ACM-130633](https://rsa.atlassian.net/browse/ACM-130633)<br/>[ACM-130632](https://rsa.atlassian.net/browse/ACM-130632) | Improved response time for Approvals and Activities pages (lazy loading). |
+| - | [ACM-130553](https://rsa.atlassian.net/browse/ACM-130553) | Workpoint updated to 4.50.16; logs now display correct client protocol/host/port. |
+| - | [ACM-130409](https://rsa.atlassian.net/browse/ACM-130409) | Time spent on each rule action added to task progress table. |
+| - | [ACM-130021](https://rsa.atlassian.net/browse/ACM-130021)<br/>[ACM-130015](https://rsa.atlassian.net/browse/ACM-130015) | Improved response time for Request page, User Request tab, and Rules page. |
+| - | [ACM-129368](https://rsa.atlassian.net/browse/ACM-129368) | New flag `custom.EmailLogParallelOptimization` to optimize Email Log display performance. |
+| - | [ACM-129338](https://rsa.atlassian.net/browse/ACM-129338) | Enhanced Role page response time; unmodified membership rules don't change Role state. |
+| - | [ACM-123379](https://rsa.atlassian.net/browse/ACM-123379) | Rule Processing Status bar introduced. |
 
 ## Fixed Issues
 
@@ -88,33 +88,33 @@ This beta feature is available to all customers for testing. If you test the new
 | **SF-02677298** | [ACM-132350](https://rsa.atlassian.net/browse/ACM-132350) | Role and Multi-App Collectors no longer throw errors with correct credentials. |
 | **SF-02673670** | [ACM-132216](https://rsa.atlassian.net/browse/ACM-132216) | `PARENT_ENT_ID/NAME` populated when creating CR from Add Access for user with multiple accounts. |
 | **SF-02674446** | [ACM-132170](https://rsa.atlassian.net/browse/ACM-132170) | REST Collector supports Array/Map format in JSON response for attribute mapping. |
-| **-** | [ACM-131558](https://rsa.atlassian.net/browse/ACM-131558) | New Review UI page title displays properly. |
-| **-** | [ACM-131358](https://rsa.atlassian.net/browse/ACM-131358) | Fixed `NoClassDefFoundError` for AD/LDAP connectors. |
-| **-** | [ACM-132064](https://rsa.atlassian.net/browse/ACM-132064) | Token refresh stopped for inactive Generic REST Collectors. |
+| - | [ACM-131558](https://rsa.atlassian.net/browse/ACM-131558) | New Review UI page title displays properly. |
+| - | [ACM-131358](https://rsa.atlassian.net/browse/ACM-131358) | Fixed `NoClassDefFoundError` for AD/LDAP connectors. |
+| - | [ACM-132064](https://rsa.atlassian.net/browse/ACM-132064) | Token refresh stopped for inactive Generic REST Collectors. |
 | **SF-02670954** | [ACM-132040](https://rsa.atlassian.net/browse/ACM-132040) | Purging works successfully on Step 9/16. |
 | **SF-02669831** | [ACM-132037](https://rsa.atlassian.net/browse/ACM-132037) | Signoff works successfully for Role Review. |
 | **SF-02669724** | [ACM-131852](https://rsa.atlassian.net/browse/ACM-131852) | Forget Password works for multiple users with same name (active users only). |
 | **SF-02669457** | [ACM-131792](https://rsa.atlassian.net/browse/ACM-131792) | Login page correctly reflects Maintenance Mode when DB is shutdown. |
 | **SF-02663424** | [ACM-131765](https://rsa.atlassian.net/browse/ACM-131765) | New flag `excludeDelOrphInPwdMgmtNotif` (default true) to skip password expiration notifications for deleted/orphaned accounts. |
-| **-** | [ACM-131719](https://rsa.atlassian.net/browse/ACM-131719) | Filtering by Email Thread in Email Logs fixed. |
-| **-** | [ACM-131717](https://rsa.atlassian.net/browse/ACM-131717) | SSH Connector: New flag `custom.useLatestSSHVersionInConnector` to enable TLS 1.2 ciphers. |
+| - | [ACM-131719](https://rsa.atlassian.net/browse/ACM-131719) | Filtering by Email Thread in Email Logs fixed. |
+| - | [ACM-131717](https://rsa.atlassian.net/browse/ACM-131717) | SSH Connector: New flag `custom.useLatestSSHVersionInConnector` to enable TLS 1.2 ciphers. |
 | **SF-02666232** | [ACM-131683](https://rsa.atlassian.net/browse/ACM-131683) | Correspondng workflows appear when Process is set to ANY. |
 | **SF-02665554** | [ACM-131668](https://rsa.atlassian.net/browse/ACM-131668) | Semicolon (;) supported in stored procedures for Generic Database Connector. |
 | **SF-02666422** | [ACM-131662](https://rsa.atlassian.net/browse/ACM-131662)<br/>[ACM-131488](https://rsa.atlassian.net/browse/ACM-131488) | Generic REST: Restricted history table updates during token renewal. |
-| **-** | [ACM-131560](https://rsa.atlassian.net/browse/ACM-131560) | Group objects now have Status attribute for SCIM ValueCloud. |
+| - | [ACM-131560](https://rsa.atlassian.net/browse/ACM-131560) | Group objects now have Status attribute for SCIM ValueCloud. |
 | **SF-02660136** | [ACM-131518](https://rsa.atlassian.net/browse/ACM-131518)<br/>[ACM-131517](https://rsa.atlassian.net/browse/ACM-131517) | Removed redundant JAR files. |
 | **SF-02661257** | [ACM-131413](https://rsa.atlassian.net/browse/ACM-131413) | `HideAlreadyAddedEntitlementForParticularAccount`: Hidden if already assigned indirectly. |
 | **SF-02660793** | [ACM-131405](https://rsa.atlassian.net/browse/ACM-131405) | Old CR approvals no longer appear under My Approvals after Archiving. |
 | **SF-02653162** | [ACM-131344](https://rsa.atlassian.net/browse/ACM-131344) | App Metadata Collectors: Custom Attributes in Applications Version table working. |
-| **-** | [ACM-131343](https://rsa.atlassian.net/browse/ACM-131343) | Added filter to exclude indirect access elements in Data Resource Access reviews. |
+| - | [ACM-131343](https://rsa.atlassian.net/browse/ACM-131343) | Added filter to exclude indirect access elements in Data Resource Access reviews. |
 | **SF-02661326** | [ACM-131341](https://rsa.atlassian.net/browse/ACM-131341) | Ports 5672, 61613, 1883, 61614 no longer used by AFX. |
 | **SF-02660699** | [ACM-131340](https://rsa.atlassian.net/browse/ACM-131340) | Data Archiving performance enhanced. |
 | **SF-02660949** | [ACM-131300](https://rsa.atlassian.net/browse/ACM-131300) | UI Language change correctly reflects in Notifications and Help tooltips. |
-| **-** | [ACM-131235](https://rsa.atlassian.net/browse/ACM-131235) | SCIM Connector creates accounts with `active=true`. |
-| **-** | [ACM-131234](https://rsa.atlassian.net/browse/ACM-131234) | Support for content type and accept header in SCIM Test Connection. |
-| **-** | [ACM-131049](https://rsa.atlassian.net/browse/ACM-131049) | Multi-App Collector no longer throws errors. |
+| - | [ACM-131235](https://rsa.atlassian.net/browse/ACM-131235) | SCIM Connector creates accounts with `active=true`. |
+| - | [ACM-131234](https://rsa.atlassian.net/browse/ACM-131234) | Support for content type and accept header in SCIM Test Connection. |
+| - | [ACM-131049](https://rsa.atlassian.net/browse/ACM-131049) | Multi-App Collector no longer throws errors. |
 | **SF-02657305** | [ACM-131000](https://rsa.atlassian.net/browse/ACM-131000) | RESTful Connector support for `text/html` in request body. |
-| **-** | [ACM-130908](https://rsa.atlassian.net/browse/ACM-130908) | Role Review (High Maintenance) changes reflected in Role Summary tabs. |
+| - | [ACM-130908](https://rsa.atlassian.net/browse/ACM-130908) | Role Review (High Maintenance) changes reflected in Role Summary tabs. |
 | **SF-02646025** | [ACM-130876](https://rsa.atlassian.net/browse/ACM-130876) | Role Review History log records correct actor. |
 | **SF-02649180** | [ACM-130751](https://rsa.atlassian.net/browse/ACM-130751) | Request Form fields displayed correctly with "Hide table if empty". |
 | **SF-02651832** | [ACM-130707](https://rsa.atlassian.net/browse/ACM-130707) | Review Definitions no longer show errors. |

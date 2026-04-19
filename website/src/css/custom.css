@@ -90,13 +90,19 @@ th {
 table td:first-child,
 table th:first-child {
   white-space: nowrap;
-  width: 1%;
-  /* Shrink to fit content */
+  min-width: 120px;
+  width: 120px;
 }
 
-/* Fix "Fixed Issues" table Reference column wrapping and styling */
-h2[id^="fixed-issues"]+table td:nth-child(2),
-h2[id^="fixed-issues"]+table th:nth-child(2) {
+/* Fix "Fixed Issues", "New Features", and "Enhancements" table Reference column wrapping and styling */
+h2[id^="fixed-issues"] ~ table td:nth-child(2),
+h2[id^="fixed-issues"] ~ table th:nth-child(2),
+h2[id^="new-features"] ~ table td:nth-child(2),
+h2[id^="new-features"] ~ table th:nth-child(2),
+h2[id^="enhancements"] ~ table td:nth-child(2),
+h2[id^="enhancements"] ~ table th:nth-child(2),
+h2[id^="functional-changes"] ~ table td:nth-child(2),
+h2[id^="functional-changes"] ~ table th:nth-child(2) {
   white-space: nowrap;
   width: 1%;
   /* Shrink to fit content */
