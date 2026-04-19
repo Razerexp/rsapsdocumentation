@@ -95,14 +95,14 @@ table th:first-child {
 }
 
 /* Fix "Fixed Issues", "New Features", and "Enhancements" table Reference column wrapping and styling */
-h2[id^="fixed-issues"] ~ table td:nth-child(2),
-h2[id^="fixed-issues"] ~ table th:nth-child(2),
-h2[id^="new-features"] ~ table td:nth-child(2),
-h2[id^="new-features"] ~ table th:nth-child(2),
-h2[id^="enhancements"] ~ table td:nth-child(2),
-h2[id^="enhancements"] ~ table th:nth-child(2),
-h2[id^="functional-changes"] ~ table td:nth-child(2),
-h2[id^="functional-changes"] ~ table th:nth-child(2) {
+h2[id^="fixed-issues"] + table td:nth-child(2),
+h2[id^="fixed-issues"] + table th:nth-child(2),
+h2[id^="new-features"] + table td:nth-child(2),
+h2[id^="new-features"] + table th:nth-child(2),
+h2[id^="enhancements"] + table td:nth-child(2),
+h2[id^="enhancements"] + table th:nth-child(2),
+h2[id^="functional-changes"] + table td:nth-child(2),
+h2[id^="functional-changes"] + table th:nth-child(2) {
   white-space: nowrap;
   width: 1%;
   /* Shrink to fit content */
@@ -130,15 +130,15 @@ table td {
 }
 
 /* Force Known Issues tables to not exceed 100% layout and split 2nd & 3rd columns equally */
-h2[id^="known-issues"] ~ table {
+h2[id^="known-issues"] + table {
   table-layout: fixed;
   width: 100%;
 }
 
-h2[id^="known-issues"] ~ table td:nth-child(2),
-h2[id^="known-issues"] ~ table th:nth-child(2),
-h2[id^="known-issues"] ~ table td:nth-child(3),
-h2[id^="known-issues"] ~ table th:nth-child(3) {
+h2[id^="known-issues"] + table td:nth-child(2),
+h2[id^="known-issues"] + table th:nth-child(2),
+h2[id^="known-issues"] + table td:nth-child(3),
+h2[id^="known-issues"] + table th:nth-child(3) {
   width: 50%;
   word-wrap: break-word;
 }
