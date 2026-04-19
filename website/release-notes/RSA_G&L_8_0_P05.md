@@ -8,6 +8,9 @@ sidebar_position: 6
 
 # RSA Governance & Lifecycle 8.0 Patch 05 Release Notes
 
+**Release Date:** 2025-01-13  
+**Version:** 8.0.0 P05
+
 ## Executive Summary
 
 RSA Governance & Lifecycle version 8.0.0 P05 introduces features designed to enhance system efficiency, automate key tasks, and improve visibility. With updates like automatic archiving, event notifications, support of Oracle TCPS, and expanded cloud insights, this release reduces manual intervention, optimizes performance, and bolsters security.

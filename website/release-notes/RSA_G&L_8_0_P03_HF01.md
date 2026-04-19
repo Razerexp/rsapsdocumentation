@@ -8,6 +8,7 @@ sidebar_position: 8
 
 # RSA Governance & Lifecycle 8.0 Patch 03 HF01
 
+**Release Date:** 2024-07-31  
 **Version:** 8.0.0 P03_HF01
 
 ## Executive Summary

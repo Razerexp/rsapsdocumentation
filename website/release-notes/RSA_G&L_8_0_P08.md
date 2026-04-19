@@ -8,7 +8,7 @@ sidebar_position: 3
 
 # RSA Governance & Lifecycle 8.0 Patch 08
 
-**Release Date:** 2026-01-11
+**Release Date:** 202-11-03  
 **Version:** 8.0.0 P08
 
 ## Executive Summary

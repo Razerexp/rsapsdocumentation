@@ -6,7 +6,7 @@ sidebar_position: 4
 
 <div className="text--justify">
 
-**Release Date:** August 2025
+**Release Date:** 2025-08-14  
 **Version:** 8.0 P07 HF01
 
 
