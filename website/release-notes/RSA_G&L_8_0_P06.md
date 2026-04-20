@@ -126,9 +126,9 @@ It also helps to reduce the chances of targeted exploits based on known software
 
 ## Known Issues and Limitations
 
-| Issue ID | Description |
-| :--- | :--- |
-| **[ACM-129155](https://rsa.atlassian.net/browse/ACM-129155)** | In the Workflow, the Add Another checkbox is not working. |
+| Issue ID | Description | Workaround |
+| :--- | :--- | :--- |
+| **[ACM-129155](https://rsa.atlassian.net/browse/ACM-129155)** | In the Workflow, the Add Another checkbox is not working. |N/A  |
 
 ## Platform Support Matrix
 
