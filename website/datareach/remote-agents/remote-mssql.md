@@ -25,10 +25,11 @@ The agent software is distributed as a tarball. You must extract it and structur
 Log in as `root` (or use `sudo`) and perform the following operations:
 
 1.  **Extract the Agent Package**:
-    Unpack the Unix agent distribution (compatible with cross-platform) into the directory created for MSSQL:
+    Unpack the agent distribution package for your platform into the directory created for MSSQL:
     ```bash
-    tar -zxf /opt/rsa/artifacts/Agent_Unix_<Version>.tar.gz -C /opt/rsa/datareach/AgentMSSQL
+    tar -zxf /opt/rsa/artifacts/Agent_<Platform>_<Version>.tar.gz -C /opt/rsa/datareach/AgentMSSQL
     ```
+    *(For Linux, the package is typically `Agent_Linux_<Version>.tar.gz`)*
 
 2.  **Organize Files**:
     Move the internal component directories (`agent`, `java`) to the root of the agent installation and cleanup:
@@ -42,8 +43,9 @@ Log in as `root` (or use `sudo`) and perform the following operations:
 3.  **Install Job Definitions**:
     Extract the database-specific job definitions package:
     ```bash
-    tar -zxf /opt/rsa/artifacts/Agent_Job_Database_1.4.v28072021110909.tar.gz -C /opt/rsa/datareach/AgentMSSQL
+    tar -zxf /opt/rsa/artifacts/Agent_Job_<Type>_<Version>.tar.gz -C /opt/rsa/datareach/AgentMSSQL
     ```
+    *(For database collections, use `Agent_Job_Database_<Version>.tar.gz`)*
 
 ## Configure Certificates
 

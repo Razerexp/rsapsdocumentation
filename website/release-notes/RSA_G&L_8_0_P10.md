@@ -29,13 +29,13 @@ With this enhancement, clicking anywhere within the Search Filter box will autom
 
 When this feature is enabled, users can still search across all visible columns by selecting the Any Column option in the Advanced Search dropdown. To restrict the option to select Any Column for non-System Admin users, set another flag `disableQuickFilterSearch` to `true`; this flag defaults to `false`.
 
-### New User Interface for Reviews
+### New User Interface for Reviews 
 This feature is not intended for production use and is hidden by a custom feature flag named `FeatureFlag.UseEnhancedUIForReviews`. When this feature is enabled (only by Admin user), from **Admin > System > Settings tab > Edit > Custom**, reviewers are provided with a toggle option from **Home > Reviews > My Reviews page > Use the new UI** toggle, to allow experiencing the new UI.
 
 * When the toggle is turned ON, opening any of the respective reviews will provide the new UI experience.
 * By turning the toggle OFF, users will be able to perform the respective reviews using existing UI. Ensure you reload the page to display the new UI.
 
-This beta feature is available to all customers for testing. If you test the new UI, please send us your feedback or questions via `gl-beta-feedback@rsa.com`. Please do not contact RSA Technical Support or open a Technical Support Case if you have any feedback on this beta feature.
+> This beta feature is available to all customers for testing. If you test the new UI, please send us your feedback or questions via [gl-beta-feedback@rsa.com](mailto:gl-beta-feedback@rsa.com). Please do not contact RSA Technical Support or do not open a Technical Support Case if you have any feedback on this beta feature
 
 #### Account and Group Review
 The user interface is introduced for the Account and the Group Review pages. It enhances the user experience and provides a better display for the respective data.

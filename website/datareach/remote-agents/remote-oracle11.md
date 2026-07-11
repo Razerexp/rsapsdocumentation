@@ -25,13 +25,14 @@ Extract and organize the agent software.
 Log in as `root` (or use `sudo`) and perform the following operations:
 
 1.  **Extract the Agent Package**:
-    Unpack the agent distribution into the directory created above:
+    Unpack the agent distribution package for your platform into the directory created:
     ```bash
-    tar -zxf /opt/rsa/artifacts/Agent_Unix_<Version>.tar.gz -C /opt/rsa/datareach/<Agent_Name>
+    tar -zxf /opt/rsa/artifacts/Agent_<Platform>_<Version>.tar.gz -C /opt/rsa/datareach/<Agent_Name>
     ```
+    *(For Linux, the package is typically `Agent_Linux_<Version>.tar.gz`)*
 
 2.  **Organize Files**:
-    Move the internal component directories (`agent`, `java`) to the root of the agent installation and clean up:
+    Move the internal component directories (`agent`, `java`) to the root of the agent installation and remove the temporary extraction folder:
     ```bash
     cp -R /opt/rsa/datareach/<Agent_Name>*/datareach/agent/* /opt/rsa/datareach/<Agent_Name>
     cp -R /opt/rsa/datareach/<Agent_Name>*/datareach/java /opt/rsa/datareach/
@@ -40,10 +41,11 @@ Log in as `root` (or use `sudo`) and perform the following operations:
     ```
 
 3.  **Install Job Definitions**:
-    Extract the database-specific job definitions:
+    Extract the database-specific job definitions package:
     ```bash
-    tar -zxf /opt/rsa/artifacts/Agent_Job_Database_<Version>.tar.gz -C /opt/rsa/datareach/<Agent_Name>
+    tar -zxf /opt/rsa/artifacts/Agent_Job_<Type>_<Version>.tar.gz -C /opt/rsa/datareach/<Agent_Name>
     ```
+    *(For database collections, use `Agent_Job_Database_<Version>.tar.gz`)*
 
 ## Configure Certificates
 

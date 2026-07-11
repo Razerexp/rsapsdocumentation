@@ -4,9 +4,11 @@ sidebar_position: 3
 
 # Mastercontroller Configuration
 
+These are the steps that need to be followed everytime a new agent is deployed or hosts are added/removed from the collection scope.
+
 ## Host List Setup
 
-The Host List files define the inventory of target endpoints that DataReach will connect to. You must configure these files before starting the service.
+The Host List files define the inventory of target endpoints that DataReach will connect to. An modification to these files requires a mastercontroller restart.
 
 **Step 1: Initialize Configuration Files**
 
@@ -23,13 +25,17 @@ cp common_db_hosts.csv customer_dbmysql_hosts.csv
 
 **Step 2: Populate Host Information**
 
-Edit each of the newly created CSV files (`customer_*.csv`) to include your specific target servers. Each file must contain the following columns:
+Edit each of the newly created CSV files (`customer_*.csv`) to populate your target system details using the following columns:
 
-*   **host_type**: The category of the host (e.g., `Unix`, `Oracle`).
-*   **host_name**: A unique identifier for the host within DataReach.
-*   **connection_string**: The connection details, such as IP address, protocol, and port.
-*   **credential_alias**: The key used to look up the password for this host from the credential provider.
-*   **alias_type**: Specifies if the alias refers to a `USERNAME` or a `PROFILE`.
+| Column | Meaning | Example |
+| :--- | :--- | :--- |
+| **host_type** | Type of target system | `unix`, `oracle`, `rest` |
+| **host_name** | Unique name/identifier for the target host within DataReach | `prod_oracle_01` |
+| **connection_string** | Connection details (protocol, address, port) to reach the host | `ssh://192.168.1.50` |
+| **credential_alias** | Label/key that maps to the stored credentials in the credential provider | `oracle_admin` |
+| **alias_type** | Specifies if the alias refers to a single username or a profile | `USERNAME` or `PROFILE` |
+
+> **Note:** The quantity, naming conventions, and specific contents of these host list CSV files should be customized according to your organization's needs. We recommend determining how to segregate these files based on your network topology and the various types of hosts that need to be collected from. The segregation shown above (e.g., by operating system or database type) is simply a baseline recommendation.
 
 ## Host Plugin Set Up
 
@@ -44,91 +50,84 @@ cd /opt/rsa/datareach/mastercontroller/plugins/hostlist-provider-jdbc
 vi config.xml
 ```
 
-**Step 2: Update References**
+**Step 2: Configure Agent Query Blocks**
 
-Locate the `<agents>` section and update the `<query>` tags to point to your new CSV filenames (e.g., replace default names with `customer_oracle_hosts`).
+The `config.xml` file contains XML blocks for each defined agent. The `<query>` tag uses an HXTT SQL query to retrieve the list of hosts from the CSV files in the data folder (from the previous section).
 
-1.  **Oracle**: Update `<agents> -> <oracle> -> <query>` to `customer_oracle_hosts`.
-2.  **Oracle 11**: Add a new section for Oracle 11 if required.
-3.  **Unix**: Update `<agents> -> <unix> -> <query>` to `customer_unix_hosts`.
-4.  **MySQL**: Update `<agents> -> <mysql> -> <query>` to `customer_mysql_hosts`.
+Every time a new agent is deployed, a new XML block must be added to this file with the appropriate HXTT query.
 
-## Generate DR Environment Path
+**Example Query Configuration:**
 
-The `DR_ENV_PATH` variable is critical for the application framework to locate its components generally.
+```xml
+<oracle>
+    <query>
+        select host_type, alias_type, host_name, connection_string,
+        credential_alias, connection_string as cust_attr_1 from
+        common_db_hosts_5 where db_type='oracle'
+    </query>
+</oracle>
+```
+> **Note:** In the example query, `common_db_hosts_5` represents the CSV file name. You must update this to match the actual CSV file name initialized in the **Host List Setup** section (e.g., `customer_dboracle_hosts` or `customer_dbmysql_hosts`), omitting the `.csv` extension as the HXTT JDBC driver treats filenames as database table names.
 
-**Step 1: Generate the Path Value**
+## Agent Configuration Preparation
 
-Run the `drutils.sh` utility to calculate the correct environment path string:
+You need to prepare configuration folders for any new agents you are deploying.
+
+**Step 1: Create Directory Structure**
+
+For example, to configure an `oracle11` agent:
 
 ```bash
-cd /opt/rsa/datareach/mastercontroller/scripts/
-./drutils.sh envpath generate
+cd /opt/rsa/datareach/mastercontroller/agent_configs
+mkdir -p oracle11/package/config
 ```
-*Copy the output value from this command.*
 
-**Step 2: Update Framework Config**
+**Step 2: Populate Configuration**
 
-Edit the framework configuration file and paste the generated value:
+Copy the default configuration templates as a starting point:
 
 ```bash
-vi /opt/rsa/datareach/mastercontroller/scripts/framework/config.sh
+cp -R /opt/rsa/datareach/mastercontroller/agent_configs/oracle/* /opt/rsa/datareach/mastercontroller/agent_configs/oracle11
 ```
 
-Find the `export DR_ENV_PATH` line and update it:
-```bash
-export DR_ENV_PATH="<PASTE_GENERATED_VALUE_HERE>"
-```
+## Service Management
 
-## Primary Mastercontroller Configuration File - setenv.sh
+**Starting the Service**
 
-This file specifies environment variables for the Mastercontroller's web server (Tomcat).
-Path: `/opt/rsa/datareach/mastercontroller/tomcat/tomcat-datareach/bin/setenv.sh`
-
-| Parameter Name | Description |
-| :--- | :--- |
-| **DATAREACH_CWD** | Sets the root of the Mastercontroller installation. Set by startup script. |
-| **DR_AGENT_CONFIG_DIR** | Agent configuration root directory. Default: `/opt/rsa/datareach/mastercontroller/agent_configs`. |
-| **DR_MASTER_CONTROLLER_KEYSTORE** | Path to the Java keystore for TLS1.2 web service. |
-| **DR_MASTER_CONTROLLER_KEYSTORE_PASSWORD** | Password for the keystore. Can be encrypted using `drutils.sh`. |
-| **DR_MASTER_CONTROLLER_KEY_ALIAS** | Alias of the Mastercontroller certificate in the keystore. |
-| **DR_MASTER_CONTROLLER_TRUSTSTORE** | Trust store for mutual-SSL authentication with Agents. |
-| **DR_MASTER_CONTROLLER_TRUSTSTORE_PASSWORD** | Password for the trust store. Can be encrypted. |
-| **DR_ENV_PATH** | Encryption seed - must be unique for each environment. Generated by `drutils.sh`. |
-| **DR_PLUGINS_DIR** | Plugins root directory. Default: `/opt/rsa/datareach/mastercontroller/plugins`. |
-| **DR_LOG4J2_CONFIG_FILE** | Log4j2 config file path. Default: `.../scripts/log4j2.xml`. |
-| **DR_LOGS_DIR** | Logs directory. Default: `/opt/rsa/datareach/mastercontroller/logs`. |
-
-## Encrypt Passwords
-
-DataReach requires sensitive passwords (like the Keystore password and Database password) to be encrypted before being stored in configuration files.
-
-**Step 1: Encrypt the Strings**
-
-Use the encryption utility to generate secure strings. Replace `init1234` and `<<datareach database password>>` with your actual passwords:
+To start the DataReach Mastercontroller, execute the startup script as the `datareach` user:
 
 ```bash
-cd /opt/rsa/datareach/mastercontroller/scripts/
-./drutils.sh encrypt string init1234
-./drutils.sh encrypt string <<datareach database password>>
+cd /opt/rsa/datareach/mastercontroller/scripts
+./datareach_startup.sh
 ```
 
-**Step 2: Update Configuration Files**
+**Stopping the Service**
 
-Copy the **encrypted output string** (not the plain text password) and update the following files:
+To stop the service, use the shutdown script:
 
-*   **Mastercontroller Config**:
-    Edit `/opt/rsa/datareach/mastercontroller/scripts/framework/config.sh`:
-    ```bash
-    DR_MASTER_CONTROLLER_KEYSTORE_PASSWORD = <Encrypted_Keystore_Password>
-    ```
+```bash
+cd /opt/rsa/datareach/mastercontroller/scripts
+./datareach_shutdown.sh
+```
 
-*   **Agent Configs**:
-    For each agent, edit `/opt/rsa/datareach/<AgentName>/config/agent_controller.xml` and update the `<keystore_password>` tag.
+## Backup Management
 
-## Generate DataReach Certificates
+It is critical to maintain backups of your certificates and configurations.
 
-Secure communication between the Mastercontroller and Agents relies on mutual TLS authentication using Java Keystores (JKS).
+**Create Backup Directory**
+
+SSH to the server as `root` and create a dedicated backup location:
+
+```bash
+mkdir -p /opt/rsa/backup
+```
+*Regularly copy your `/opt/rsa/datareach/` configuration files and certificates to this location.*
+
+## Generate DataReach Certificates (Optional)
+
+> **Note:** This section is optional. New builds of DataReach ship with pre-generated certificates, so you do not need to generate new ones unless explicitly required by your organization's security policy. If new certificates are generated, the KEYSTORE and TRUSTSTORE passwords must be updated in the framework/config with the password used during keystore generation (refer to the [Update Configuration Files](./mastercontroller-install.md#update-configuration-files) section in the installation guide).
+
+Secure communication between the Mastercontroller and Agents relies on mutual TLS authentication using Java Keystores (JKS). If you choose to generate custom certificates, follow the steps below:
 
 **Step 1: Backup Default Certificates**
 
@@ -168,56 +167,3 @@ Ensure that only the `datareach` user can read these sensitive files:
 ```bash
 chmod -R 744 /opt/rsa/datareach/mastercontroller/certificates
 ```
-
-## Agent Configuration Preparation
-
-You need to prepare configuration folders for any new agents you are deploying.
-
-**Step 1: Create Directory Structure**
-
-For example, to configure an `oracle11` agent:
-
-```bash
-cd /opt/rsa/datareach/mastercontroller/agent_configs
-mkdir -p oracle11/package/config
-```
-
-**Step 2: Populate Configuration**
-
-Copy the default Unix configuration templates as a starting point:
-
-```bash
-cp -R /opt/rsa/datareach/mastercontroller/agent_configs/unix/* /opt/rsa/datareach/mastercontroller/agent_configs/oracle11
-```
-
-## Service Management
-
-**Starting the Service**
-
-To start the DataReach Mastercontroller, execute the startup script as the `datareach` user:
-
-```bash
-cd /opt/rsa/datareach/mastercontroller/scripts
-./datareach_startup.sh
-```
-
-**Stopping the Service**
-
-To stop the service, use the shutdown script:
-
-```bash
-/opt/rsa/datareach/mastercontroller/scripts/datareach_shutdown.sh
-```
-
-## Backup Management
-
-It is critical to maintain backups of your certificates and configurations.
-
-**Create Backup Directory**
-
-SSH to the server as `root` and create a dedicated backup location:
-
-```bash
-mkdir -p /opt/rsa/backup
-```
-*Regularly copy your `/opt/rsa/datareach/` configuration files and certificates to this location.*

@@ -25,10 +25,11 @@ The agent software is distributed as a tarball. You must extract it and structur
 Log in as `root` (or use `sudo`) and perform the following operations:
 
 1.  **Extract the Agent Package**:
-    Unpack the Unix agent distribution into the destination directory:
+    Unpack the agent distribution package for your platform into the destination directory:
     ```bash
-    tar -zxf /opt/rsa/artifacts/Agent_Unix_<Version>.tar.gz -C /opt/rsa/datareach/<Agent_Name>
+    tar -zxf /opt/rsa/artifacts/Agent_<Platform>_<Version>.tar.gz -C /opt/rsa/datareach/<Agent_Name>
     ```
+    *(For Linux, the package is typically `Agent_Linux_<Version>.tar.gz`)*
 
 2.  **Organize Files**:
     Move the internal component directories (`agent`, `java`) to the root of the agent installation path and cleanup the extraction artifacts:
@@ -40,10 +41,11 @@ Log in as `root` (or use `sudo`) and perform the following operations:
     ```
 
 3.  **Install Job Definitions**:
-    Extract the Unix-specific job definitions:
+    Extract the job definitions package matching your host type:
     ```bash
-    tar -zxf /opt/rsa/artifacts/Agent_Job_UNIX_<Version>.tar.gz -C /opt/rsa/datareach/<Agent_Name>
+    tar -zxf /opt/rsa/artifacts/Agent_Job_<Type>_<Version>.tar.gz -C /opt/rsa/datareach/<Agent_Name>
     ```
+    *(For Unix hosts, use `Agent_Job_UNIX_<Version>.tar.gz`)*
 
 ## Configure Certificates
 

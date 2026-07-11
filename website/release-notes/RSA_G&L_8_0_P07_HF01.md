@@ -6,13 +6,15 @@ sidebar_position: 4
 
 <div className="text--justify">
 
+# RSA Governance & Lifecycle 8.0 Patch 07 HF01 Release Notes
+
 **Release Date:** 2025-08-14  
 **Version:** 8.0 P07 HF01
 
 
 > RSA Governance & Lifecycle version 8.0.0 P07 HF01 is a replacement for version 8.0.0 P07 due to a potential failure in applying the P07 patch when public views in database schema include custom attributes ([ACM-132849](https://rsa.atlassian.net/browse/ACM-132849)). The patch P07 is no longer available for download from RSA Community. The patch P07 HF01 can be applied directly to all previous patch levels, including P07, of RSA Governance & Lifecycle 8.0.0.
 
-## What's New
+## Executive Summary
 RSA Governance & Lifecycle version 8.0.0 P07 introduces features designed to enhance system efficiency, automate key tasks, and improve visibility. With updates like Anonymization of Terminated User Data, and [Beta] of User Access Review's new UX/UI, this release reduces manual intervention, optimizes performance, and bolsters security.
 
 ## Highlighted Features
@@ -24,14 +26,13 @@ This feature removes all attributes of the selected terminated users and replace
 
 For more information about configuring and activating Data Anonymization, see the [Anonymization of Terminated User Data Section in the Administrator's Guide](https://community.rsa.com/s/article/RSA-Governance-Lifecycle-Administrators-Guide-8-0).
 
-### New Reviewer UI for User Reviews – [Beta]
+### New Reviewer UI for User Reviews – <span className="badge badge--danger">[BETA]</span>
 The feature is not intended for production use and is hidden by a custom feature flag named `FeatureFlag.UseEnhancedUIForReviews`. When this feature is enabled (only by Admin user), from **Admin > System > Settings tab > Edit > Custom**, reviewers are provided with a toggle option, from **Home > Reviews > My Reviews** page > **Use the new UI** toggle, to allow experiencing new UI.
 
 *   When the toggle is turned **ON**, opening any user review will provide the new UI experience.
 *   By turning the toggle **OFF**, users will be able to perform the reviews using existing UI.
 
 This feature will be extended to all other review types in later patches and will be the only option available when it is ready for production use.
-
 
 > This beta feature is available to all customers for testing. If you test the new UI, please send us your feedback or questions via [gl-beta-feedback@rsa.com](mailto:gl-beta-feedback@rsa.com). Please do not contact RSA Technical Support or do not open a Technical Support Case if you have any feedback on this beta feature.
 

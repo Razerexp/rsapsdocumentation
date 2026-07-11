@@ -28,13 +28,13 @@ The Duplicate Data Cleanup feature in RSA Governance & Lifecycle provides a stru
 
 It can be accessed by users from **Collectors > Duplicate Data Cleanup**. This feature marks duplicate users/accounts without physically deleting them from the underlying database tables. Instead, they are logically flagged as duplicates, preserving data integrity while ensuring that these records are excluded from further processing within the application. This approach helps maintain the uniqueness and consistency of user and account data across the system.
 
-### Role Definition Review New UI – [Public Preview]
+### Role Definition Review New UI – <span className="badge badge--danger">[BETA]</span>
 The feature is not intended for production use and is hidden by a custom feature flag named `FeatureFlag.UseEnhancedUIForReviews`. When this feature is enabled (only by Admin user), from **Admin > System > Settings tab > Edit > Custom**, reviewers are provided with a toggle option, from **Home > Reviews > My Reviews** page > Use the new UI toggle, to allow experiencing new UI.
 
 *   When the toggle is turned ON, opening any user review will provide the new UI experience.
 *   By turning the toggle OFF, users will be able to perform the reviews using existing UI.
 
-This beta feature is available to all customers for testing. If you test the new UI, please send us your feedback or questions via [`gl-beta-feedback@rsa.com`](mailto:gl-beta-feedback@rsa.com).
+> This beta feature is available to all customers for testing. If you test the new UI, please send us your feedback or questions via [gl-beta-feedback@rsa.com](mailto:gl-beta-feedback@rsa.com). Please do not contact RSA Technical Support or do not open a Technical Support Case if you have any feedback on this beta feature
 
 #### Sub-features in New UI:
 *   **Insights & Guidance**: View all reviews and review items information in a brief. It is like a statistical view helping you to monitor reviews displayed according to their severity.
