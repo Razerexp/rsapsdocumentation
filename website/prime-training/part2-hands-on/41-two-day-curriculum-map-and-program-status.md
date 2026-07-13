@@ -1,0 +1,41 @@
+---
+title: "Two-Day Curriculum Map and Program Status"
+sidebar_position: 41
+---
+
+# Two-Day Curriculum Map and Program Status
+
+## What the Two Days Covered
+
+| Competency Area | Day 1 | Day 2 | Depth Achieved |
+| :--- | :--- | :--- | :--- |
+| Suite knowledge (components & positioning) | ● | ● | Complete — all components introduced; VTS and PCAP built end-to-end |
+| Installation (PrimeKit \+ Quick Setup) | ● | Complete with runbook ([Section 22](../part1-foundations/22-reconstructed-installation-runbook.md)) | Architecture, clustering & sizing |
+| ● | ◐ | Complete; Docker/Redis extends the session model | Certificates & TLS |
+| ● | Complete — replacement, DH rule, server.xml, JKS legacy | Runtime configuration (config files) | ● |
+| ● | Complete — XML surface (Day 1) \+ config.sh/setenv.sh (Day 2) | WPI / password rotation feature chain | ● |
+| ● | Complete end-to-end — Bulk Update \+ SSP generation \+ AD/LDAPS path | Service accounts & API security | ● |
+| ◐ | Complete; OAuth adoption evolving | Containerization & labs | ◐ |
+| ● | Working knowledge; Hillis is the deep resource | Branding & email templates | ● |
+| Complete — two-file CSS model \+ template pairs | Patching & rollback | ◐ | ● |
+| Complete — WAR/patches/backups workflow | Troubleshooting methodology | ◐ | ● |
+| Modeled extensively; dedicated module still to come | Federal/SCIF delivery patterns | ● | ◐ |
+| Strong discussion coverage; PCAP/CAC routes to Hillis | Compliance evidence (STIG, SOC) | ● | ◐ |
+
+In progress — CAS STIG in approval; SOC 2/3 identified
+
+*● full module    ◐ partial / discussion coverage*
+
+## Remaining Program Elements
+
+- Dedicated troubleshooting module — promised by the trainer: error classes mapped to their log files, diagnostic sequences, and common failure signatures.
+- Docker lab enablement — package delivery to OneDrive plus assisted first builds (Hillis/Ramesh).
+- PCAP-in-Docker resolution — root cause and a clean recorded walkthrough of the working configuration.
+- Slide-deck reconciliation — delivered: [Part III](../part3-deck-companion/42-the-training-deck-overview-and-how-to-use-part-iii.md) of this guide integrates Nadine's 104-slide training master with full annotation and a slide-to-chapter map ([Chapter 49](../part3-deck-companion/49-slide-to-chapter-reconciliation-map.md)). The ~140-slide engagement deck remains available for a future pass.
+- Field application — the July 27 SOCOM onsite is the first live proving ground for the WPI/password-generation chain rehearsed across both days.
+
+## Closing Note
+
+Across two days and roughly six and a half hours of recorded instruction, the program moved the team from suite orientation to genuine operational readiness: every file a consultant will touch in a standard engagement has now been opened, edited, broken, and repaired on camera. The recordings, the OneDrive materials library, the lab options, and this reference document together form a self-service enablement kit — and the recurring lesson threading every module, from the first mis-set SMTP entry to the last downed MailHog container, is the one worth carrying onsite: *read the logs first; the answer is almost always in a small number of known files.*
+
+*End of [Part II](./25-day-2-session-logistics-and-structure.md). [Part III](../part3-deck-companion/42-the-training-deck-overview-and-how-to-use-part-iii.md) — The Training Deck Companion — follows.*
