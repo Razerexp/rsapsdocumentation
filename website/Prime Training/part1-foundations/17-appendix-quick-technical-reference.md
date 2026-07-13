@@ -5,106 +5,29 @@ sidebar_position: 17
 
 # Appendix: Quick Technical Reference
 
-
 ## A. Component and Port Summary
 
-Component
-
-Function
-
-Port / Interface
-
-MS / AMS
-
-REST services engine; AM & CAS bridge; hub for all Prime components
-
-8443 (default)
-
-SSP
-
-End-user self-service portal (enrollment, token mgmt, password checkout)
-
-8444 (default)
-
-HTAP
-
-Help desk / delegated admin portal
-
-8445 (default)
-
-PCAP
-
-On-prem IdP (SAML/OIDC) backed by AM
-
-Web portal
-
-VTS
-
-Desktop virtual token / tokencode generator (VDI use case)
-
-Local desktop service
-
-ENS / ENS2
-
-Expiry & event email notifications from AM report data
-
-CLI scheduler
-
-Bulk Update
-
-AD password rotation \+ WPI cache sync; alias addition; role deletion
-
-CLI (java -jar), standalone
-
-Bulk Invite / Bulk Enrollment
-
-Mass invitation / cloud enrollment links
-
-CLI tools
+| Component | Function | Port / Interface |
+| :--- | :--- | :--- |
+| MS / AMS | REST services engine; AM & CAS bridge; hub for all Prime components | 8443 (default) |
+| SSP | End-user self-service portal (enrollment, token mgmt, password checkout) | 8444 (default) |
+| HTAP | Help desk / delegated admin portal | 8445 (default) |
+| PCAP | On-prem IdP (SAML/OIDC) backed by AM | Web portal |
+| VTS | Desktop virtual token / tokencode generator (VDI use case) | Local desktop service |
+| ENS / ENS2 | Expiry & event email notifications from AM report data | CLI scheduler |
+| Bulk Update | AD password rotation \+ WPI cache sync; alias addition; role deletion | CLI (java -jar), standalone |
+| Bulk Invite / Bulk Enrollment | Mass invitation / cloud enrollment links | CLI tools |
 
 ## B. Key Configuration Files
 
-File
-
-Component
-
-Governs
-
-authclusterconfig
-
-MS
-
-Auth clustering machine IDs (1–20); identical across nodes
-
-am8config.xml
-
-MS
-
-Bind accounts; service account authentication section (rotation)
-
-authconfig.xml
-
-MS
-
-Auth profiles (authenticateOnly, clearNextTokenCode, questionsDisabled); idle & lifetime session timeouts
-
-authentication.xml
-
-SSP
-
-Homepage & /invite authentication methods; chaining; OTP/certificate/SAML/RBA enablement
-
-bulkupdate.properties
-
-Bulk Update
-
-Logging; AM FQDN & credentials; command client credentials; AD bind & search scoping
-
-Profile (Bulk Update)
-
-Bulk Update
-
-Rotation frequency; tracking attribute; password generation rules; WPI sync
+| File | Component | Governs |
+| :--- | :--- | :--- |
+| authclusterconfig | MS | Auth clustering machine IDs (1–20); identical across nodes |
+| am8config.xml | MS | Bind accounts; service account authentication section (rotation) |
+| authconfig.xml | MS | Auth profiles (authenticateOnly, clearNextTokenCode, questionsDisabled); idle & lifetime session timeouts |
+| authentication.xml | SSP | Homepage & /invite authentication methods; chaining; OTP/certificate/SAML/RBA enablement |
+| bulkupdate.properties | Bulk Update | Logging; AM FQDN & credentials; command client credentials; AD bind & search scoping |
+| Profile (Bulk Update) | Bulk Update | Rotation frequency; tracking attribute; password generation rules; WPI sync |
 
 ## C. Sizing and Scale Reference
 

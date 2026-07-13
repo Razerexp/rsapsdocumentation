@@ -5,36 +5,17 @@ sidebar_position: 7
 
 # Service Startup, Ports, and API Validation
 
-
 ## Starting the Services
 
 With Quick Setup complete, the three applications are started either via the provided shell scripts (MS\_startup.sh, SSP\_startup.sh, HTAP\_startup.sh — any order) or via systemctl start commands (which require Script 2's registration). In production, customers switch to the primekit local user and use systemctl rather than running as root (the trainer ran as root only due to a local VM quirk). Standard Linux process checks confirm each service.
 
 ## Default Ports
 
-Application
-
-Default Port
-
-Notes
-
-MS (AMS REST services)
-
-8443
-
-Core REST engine; all other components communicate through MS
-
-SSP (Self-Service Portal)
-
-8444
-
-End-user portal; internal and/or internet-facing
-
-HTAP (Help Desk Portal)
-
-8445
-
-Delegated administration
+| Application | Default Port | Notes |
+| :--- | :--- | :--- |
+| MS (AMS REST services) | 8443 | Core REST engine; all other components communicate through MS |
+| SSP (Self-Service Portal) | 8444 | End-user portal; internal and/or internet-facing |
+| HTAP (Help Desk Portal) | 8445 | Delegated administration |
 
 Ports are out-of-the-box defaults, customizable in a single configuration file when customers require alternate ports.
 

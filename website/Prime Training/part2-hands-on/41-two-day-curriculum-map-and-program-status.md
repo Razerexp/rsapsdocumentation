@@ -5,112 +5,22 @@ sidebar_position: 41
 
 # Two-Day Curriculum Map and Program Status
 
-
 ## What the Two Days Covered
 
-Competency Area
-
-Day 1
-
-Day 2
-
-Depth Achieved
-
-Suite knowledge (components & positioning)
-
-●
-
-●
-
-Complete — all components introduced; VTS and PCAP built end-to-end
-
-Installation (PrimeKit \+ Quick Setup)
-
-●
-
-Complete with runbook (Section 22)
-
-Architecture, clustering & sizing
-
-●
-
-◐
-
-Complete; Docker/Redis extends the session model
-
-Certificates & TLS
-
-●
-
-Complete — replacement, DH rule, server.xml, JKS legacy
-
-Runtime configuration (config files)
-
-●
-
-●
-
-Complete — XML surface (Day 1) \+ config.sh/setenv.sh (Day 2)
-
-WPI / password rotation feature chain
-
-●
-
-●
-
-Complete end-to-end — Bulk Update \+ SSP generation \+ AD/LDAPS path
-
-Service accounts & API security
-
-●
-
-◐
-
-Complete; OAuth adoption evolving
-
-Containerization & labs
-
-◐
-
-●
-
-Working knowledge; Hillis is the deep resource
-
-Branding & email templates
-
-●
-
-Complete — two-file CSS model \+ template pairs
-
-Patching & rollback
-
-◐
-
-●
-
-Complete — WAR/patches/backups workflow
-
-Troubleshooting methodology
-
-◐
-
-●
-
-Modeled extensively; dedicated module still to come
-
-Federal/SCIF delivery patterns
-
-●
-
-◐
-
-Strong discussion coverage; PCAP/CAC routes to Hillis
-
-Compliance evidence (STIG, SOC)
-
-●
-
-◐
+| Competency Area | Day 1 | Day 2 | Depth Achieved |
+| :--- | :--- | :--- | :--- |
+| Suite knowledge (components & positioning) | ● | ● | Complete — all components introduced; VTS and PCAP built end-to-end |
+| Installation (PrimeKit \+ Quick Setup) | ● | Complete with runbook (Section 22) | Architecture, clustering & sizing |
+| ● | ◐ | Complete; Docker/Redis extends the session model | Certificates & TLS |
+| ● | Complete — replacement, DH rule, server.xml, JKS legacy | Runtime configuration (config files) | ● |
+| ● | Complete — XML surface (Day 1) \+ config.sh/setenv.sh (Day 2) | WPI / password rotation feature chain | ● |
+| ● | Complete end-to-end — Bulk Update \+ SSP generation \+ AD/LDAPS path | Service accounts & API security | ● |
+| ◐ | Complete; OAuth adoption evolving | Containerization & labs | ◐ |
+| ● | Working knowledge; Hillis is the deep resource | Branding & email templates | ● |
+| Complete — two-file CSS model \+ template pairs | Patching & rollback | ◐ | ● |
+| Complete — WAR/patches/backups workflow | Troubleshooting methodology | ◐ | ● |
+| Modeled extensively; dedicated module still to come | Federal/SCIF delivery patterns | ● | ◐ |
+| Strong discussion coverage; PCAP/CAC routes to Hillis | Compliance evidence (STIG, SOC) | ● | ◐ |
 
 In progress — CAS STIG in approval; SOC 2/3 identified
 

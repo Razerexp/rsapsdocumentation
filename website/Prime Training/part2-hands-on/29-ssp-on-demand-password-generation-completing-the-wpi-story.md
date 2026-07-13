@@ -5,7 +5,6 @@ sidebar_position: 29
 
 # SSP On-Demand Password Generation (Completing the WPI Story)
 
-
 ## Recap and User Experience
 
 Day 2 opened its feature work by closing the loop begun in Day 1 Sections 13 and 15: Bulk Update rotates AD passwords and synchronizes the WPI cache on schedule, so users never know their password — until the moment they need one (the canonical printer scenario from Dave's customer). The SSP-side answer, demonstrated live: the user logs into the Self-Service Portal with any allowed method (including MFA), and a Generate Password button on the homepage resets their AD password and displays the new value in plain text. The password is deliberately short-lived — a configurable window (e.g., 15 or 30 minutes), after which the next scheduled Bulk Update run rotates it away.
@@ -22,25 +21,12 @@ The button is governed by one line in the SSP properties file (configs/SSP): the
 
 Generated-password composition mirrors the Bulk Update profile controls, expressed in a compact pattern syntax in the SSP properties:
 
-Symbol
-
-Meaning
-
-A
-
-Uppercase alphabetic character
-
-a
-
-Lowercase alphabetic character
-
-N
-
-Numeric character
-
-S
-
-Symbol / special character (drawn from a restrictable allowed-set, because some customers prohibit specific specials)
+| Symbol | Meaning |
+| :--- | :--- |
+| A | Uppercase alphabetic character |
+| a | Lowercase alphabetic character |
+| N | Numeric character |
+| S | Symbol / special character (drawn from a restrictable allowed-set, because some customers prohibit specific specials) |
 
 The pattern specifies minimum composition, not literal layout: with length 20 and a pattern demanding (say) three uppercase, three lowercase, three numerics, and one symbol, the generator guarantees those minimums, fills the remainder freely, and applies a shuffle operation so the output never exposes the pattern's ordering. If no special-character set is specified, any special character may be used; specifying the set restricts generation to customer-permitted symbols.
 

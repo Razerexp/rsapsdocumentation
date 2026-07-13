@@ -5,7 +5,6 @@ sidebar_position: 9
 
 # Reference Production Architecture and Sizing
 
-
 ## The Typical Deployment Pattern
 
 The typical architecture for a standard-scale customer (~50,000 users) comprises: two Authentication Manager instances (primary \+ replica) at the back; two internal Prime servers in the intranet zone, each running all three components (MS, SSP, HTAP); and, where internet-facing self-service is required, two additional internet-facing SSP servers in the DMZ. Internal users traverse an internal load balancer; external users an external one. Customers most commonly deploy F5 or Citrix NetScaler (HAProxy appears occasionally). PrimeKit itself is OS-agnostic — any Linux distribution (SUSE, Red Hat, etc.) or any Windows version is supported.
@@ -14,29 +13,11 @@ The two internal nodes provide both redundancy and load distribution — each no
 
 ## Sizing Guidance
 
-Component
-
-Minimum Specification
-
-Sizing Notes
-
-Prime server (MS/SSP/HTAP)
-
-8 vCPU / 8 GB RAM (as stated in session — official Install Guide v2.0 specifies 16 GB RAM, 60\+ GB disk; see §59)
-
-Field experience cited a customer growing 8 GB → 16 GB → 30 GB under load.
-
-Authentication Manager
-
-8 vCPU / 32 GB RAM
-
-Core product requirement.
-
-SSP concurrency
-
-≈25–30 concurrent self-service sessions per node
-
-Size by estimating simultaneous SSP logins: assume ~5 minutes per user session and compute hourly throughput per node.
+| Component | Minimum Specification | Sizing Notes |
+| :--- | :--- | :--- |
+| Prime server (MS/SSP/HTAP) | 8 vCPU / 8 GB RAM (as stated in session — official Install Guide v2.0 specifies 16 GB RAM, 60\+ GB disk; see §59) | Field experience cited a customer growing 8 GB → 16 GB → 30 GB under load. |
+| Authentication Manager | 8 vCPU / 32 GB RAM | Core product requirement. |
+| SSP concurrency | ≈25–30 concurrent self-service sessions per node | Size by estimating simultaneous SSP logins: assume ~5 minutes per user session and compute hourly throughput per node. |
 
 The real scaling ceiling is Authentication Manager, not Prime. Regardless of how many MS nodes are deployed, all admin (write) activity funnels to a single AM primary — replicas serve authentication and redundancy only (one may be promoted to primary, but only one read-write database exists at a time). Spinning up a hundred MS nodes therefore does not resolve performance problems rooted in the AM tier; sizing must consider the whole chain, scaled horizontally in most cases (vertical scaling is possible). An open question was taken as an action item: whether a hard connection limit (~200) exists per MS node before performance degrades — the trainer committed to verify.
 
