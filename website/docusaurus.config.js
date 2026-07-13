@@ -81,7 +81,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'prime-training',
-        path: 'docs',
+        path: 'Prime Training',
         routeBasePath: 'docs',
         sidebarPath: './sidebarsDocs.js',
       },
