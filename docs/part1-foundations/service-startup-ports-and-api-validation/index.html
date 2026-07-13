@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Service Startup, Ports, and API Validation | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://razerexp.github.io/rsapsdocumentation/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://razerexp.github.io/rsapsdocumentation/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://razerexp.github.io/rsapsdocumentation/docs/part1-foundations/service-startup-ports-and-api-validation"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-prime-training-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-prime-training-current"><meta data-rh="true" property="og:title" content="Service Startup, Ports, and API Validation | My Site"><meta data-rh="true" name="description" content="Starting the Services"><meta data-rh="true" property="og:description" content="Starting the Services"><link data-rh="true" rel="icon" href="https://pradeepkg.github.io/RSA/img/iconmonstr-arrow-31.svg"><link data-rh="true" rel="canonical" href="https://razerexp.github.io/rsapsdocumentation/docs/part1-foundations/service-startup-ports-and-api-validation"><link data-rh="true" rel="alternate" href="https://razerexp.github.io/rsapsdocumentation/docs/part1-foundations/service-startup-ports-and-api-validation" hreflang="en"><link data-rh="true" rel="alternate" href="https://razerexp.github.io/rsapsdocumentation/docs/part1-foundations/service-startup-ports-and-api-validation" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Service Startup, Ports, and API Validation","item":"https://razerexp.github.io/rsapsdocumentation/docs/part1-foundations/service-startup-ports-and-api-validation"}]}</script><link rel="stylesheet" href="/rsapsdocumentation/assets/css/styles.e79886ed.css">
-<script src="/rsapsdocumentation/assets/js/runtime~main.9aa81bfa.js" defer="defer"></script>
+<script src="/rsapsdocumentation/assets/js/runtime~main.386a30af.js" defer="defer"></script>
 <script src="/rsapsdocumentation/assets/js/main.8f1c3912.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -15,18 +15,7 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="starting-the-services">Starting the Services<a href="#starting-the-services" class="hash-link" aria-label="Direct link to Starting the Services" title="Direct link to Starting the Services" translate="no">​</a></h2>
 <p>With Quick Setup complete, the three applications are started either via the provided shell scripts (MS_startup.sh, SSP_startup.sh, HTAP_startup.sh — any order) or via systemctl start commands (which require Script 2&#x27;s registration). In production, customers switch to the primekit local user and use systemctl rather than running as root (the trainer ran as root only due to a local VM quirk). Standard Linux process checks confirm each service.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="default-ports">Default Ports<a href="#default-ports" class="hash-link" aria-label="Direct link to Default Ports" title="Direct link to Default Ports" translate="no">​</a></h2>
-<p>Application</p>
-<p>Default Port</p>
-<p>Notes</p>
-<p>MS (AMS REST services)</p>
-<p>8443</p>
-<p>Core REST engine; all other components communicate through MS</p>
-<p>SSP (Self-Service Portal)</p>
-<p>8444</p>
-<p>End-user portal; internal and/or internet-facing</p>
-<p>HTAP (Help Desk Portal)</p>
-<p>8445</p>
-<p>Delegated administration</p>
+<table><thead><tr><th style="text-align:left">Application</th><th style="text-align:left">Default Port</th><th style="text-align:left">Notes</th></tr></thead><tbody><tr><td style="text-align:left">MS (AMS REST services)</td><td style="text-align:left">8443</td><td style="text-align:left">Core REST engine; all other components communicate through MS</td></tr><tr><td style="text-align:left">SSP (Self-Service Portal)</td><td style="text-align:left">8444</td><td style="text-align:left">End-user portal; internal and/or internet-facing</td></tr><tr><td style="text-align:left">HTAP (Help Desk Portal)</td><td style="text-align:left">8445</td><td style="text-align:left">Delegated administration</td></tr></tbody></table>
 <p>Ports are out-of-the-box defaults, customizable in a single configuration file when customers require alternate ports.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="api-validation-in-postman">API Validation in Postman<a href="#api-validation-in-postman" class="hash-link" aria-label="Direct link to API Validation in Postman" title="Direct link to API Validation in Postman" translate="no">​</a></h2>
 <p>The trainer validated the install with the standard two-step admin API pattern, using the sample request/response formats from the Prime API Reference Guide (available in Confluence; the Postman collection JSON is typically distributed from Sean&#x27;s OneDrive):</p>
