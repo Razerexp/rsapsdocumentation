@@ -62,5 +62,5 @@ This document is intended to be used by the **G&L** Administrators at Client Org
 
 ---
 ### Document Details
-**Version**: 1.2 *Latest*
-**Last Updated**: December 13, 2025
+**Version**: 1.3 *Latest*
+**Last Updated**: July 2026
