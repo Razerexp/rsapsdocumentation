@@ -5,7 +5,6 @@ sidebar_position: 62
 
 # Runbook Cross-Validation Verdict and Program Close-Out
 
-
 ## Section 22 vs. the Official Procedure
 
 The reconstructed runbook (Section 22) was built from spoken demo narration; the official guide is the test of how well that reconstruction holds. Verdict: structurally validated — every stage and its ordering match the official procedure (tarball to /opt/rsa → symlink → scripts 1–3 → PQS on the first node → services → login tests), with the following amendments now incorporated by reference:
@@ -19,41 +18,16 @@ The reconstructed runbook (Section 22) was built from spoken demo narration; the
 
 ## Actions Closed and Opened by Part V
 
-Item
-
-Disposition
-
-D2-8 (locate Justin's AD bind permissions guide)
-
-CLOSED — the official guide documents it with screenshots (§59.4)
-
-P4-1 (do the harnesses/ARC ship currently?)
-
-CLOSED — both harnesses ship as PrimeKit Development Tools; ARC superseded by the official 50\+ Postman collection (§59.7)
-
-P4-2 (obtain hardening guide)
-
-Still open — the install guide references hardening only via the Part IV slide 60 inventory; the dedicated hardening guide remains the artifact to collect
-
-OQ-1 (per-node connection limit)
-
-Still open — no capacity figure appears in the install guide
-
-NEW: V-1 — Confirm current-edition status of Install Guide v2.0 before each engagement; establish where the team retrieves the latest edition
-
-Ramesh / team
-
-NEW: V-2 — Flag the JKS-vs-PEM certificate documentation gap (§59.6) for the next guide revision
-
-Ramesh / Prime team
-
-NEW: V-3 — Change default keystore/trust passwords ('password') as a standing hardening step on JKS-based kits
-
-All consultants — add to §19.4
-
-NEW: V-4 — Adopt the official Postman 50\+ collection as the standard consultant API toolkit; retire ad-hoc collections
-
-Team
+| Item | Disposition |
+| :--- | :--- |
+| D2-8 (locate Justin's AD bind permissions guide) | CLOSED — the official guide documents it with screenshots (§59.4) |
+| P4-1 (do the harnesses/ARC ship currently?) | CLOSED — both harnesses ship as PrimeKit Development Tools; ARC superseded by the official 50\+ Postman collection (§59.7) |
+| P4-2 (obtain hardening guide) | Still open — the install guide references hardening only via the Part IV slide 60 inventory; the dedicated hardening guide remains the artifact to collect |
+| OQ-1 (per-node connection limit) | Still open — no capacity figure appears in the install guide |
+| NEW: V-1 — Confirm current-edition status of Install Guide v2.0 before each engagement; establish where the team retrieves the latest edition | Ramesh / team |
+| NEW: V-2 — Flag the JKS-vs-PEM certificate documentation gap (§59.6) for the next guide revision | Ramesh / Prime team |
+| NEW: V-3 — Change default keystore/trust passwords ('password') as a standing hardening step on JKS-based kits | All consultants — add to §19.4 |
+| NEW: V-4 — Adopt the official Postman 50\+ collection as the standard consultant API toolkit; retire ad-hoc collections | Team |
 
 ## The Guide, Now Truly Complete
 
