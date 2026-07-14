@@ -3,12 +3,12 @@ title: "Slide-to-Chapter Reconciliation Map"
 sidebar_position: 49
 ---
 
-# Slide-to-Chapter Reconciliation Map
+# 49. Slide-to-Chapter Reconciliation Map
 
-The complete accounting of the deck against the live program. Live coverage cites the [Part I](../part1-foundations/2-session-logistics-participants-and-structure.md)–II section where the topic was taught; Deck-only marks material available only through the deck and [Part III](./42-the-training-deck-overview-and-how-to-use-part-iii.md)'s commentary. Contiguous slides sharing a mapping are grouped.
+The complete accounting of the deck against the live program. **Live coverage** cites the Part I–II section where the topic was taught; **Deck-only** marks material available only through the deck and Part III's commentary. Contiguous slides sharing a mapping are grouped.
 
 | Slides | Topic | Live Coverage | Status |
-| :--- | :--- | :--- | :--- |
+| :---- | :---- | :---- | :---- |
 | 1–4 | Title, training plan, five-day timetable | §2 (program structure) | Framing |
 | 5–6 | Day 1 / intro dividers | — | Divider |
 | 7 | Why Prime — 12-item capability inventory (notes) | §3.4 (spoken version) | Deck adds formal list |
@@ -54,8 +54,16 @@ The complete accounting of the deck against the live program. Live coverage cite
 | 97–102 | SSP SAML SSO with CAS (cloud app, ACS/Entity ID, saml\_keystore, import) | §12.1 (method exists), §33.4 (keystore machinery) | Deck-only procedure |
 | 103–104 | Thank you / closing | — | Divider |
 
-## What This Map Shows
+## 49.1 What This Map Shows
 
-Of the deck's 104 slides, roughly 35 carry material the live sessions never taught — concentrated in six clusters: the network/port matrix and runtime-stack detail (10–11), the SSP/HDAP configuration file families (33–35, 44–49), the load-balancer engineering spec (52), the External SSP and Bulk Invite procedures (57–61), the API cookbook with the ENS2 build (72–89), and the formal patch and SAML-federation procedures (95, 97–102). Every one of those clusters is now documented in Chapters 43–48 with field commentary. The remaining slides confirm, illustrate, or formalize what Parts I–II teach — and the two bodies of material cross-validate each other cleanly, with no contradictions found beyond naming conventions (AMIS/MS, HDAP/HTAP) and the deck's older service-command syntax.
+Of the deck's 104 slides, roughly **35 carry material the live sessions never taught** — concentrated in six clusters: the network/port matrix and runtime-stack detail (10–11), the SSP/HDAP configuration file families (33–35, 44–49), the load-balancer engineering spec (52), the External SSP and Bulk Invite procedures (57–61), the API cookbook with the ENS2 build (72–89), and the formal patch and SAML-federation procedures (95, 97–102). Every one of those clusters is now documented in Chapters 43–48 with field commentary. The remaining slides confirm, illustrate, or formalize what Parts I–II teach — and the two bodies of material cross-validate each other cleanly, with no contradictions found beyond naming conventions (AMIS/MS, HDAP/HTAP) and the deck's older service-command syntax.
 
-*End of [Part III](./42-the-training-deck-overview-and-how-to-use-part-iii.md). [Part IV](../part4-amis-deep-dive/50-the-amis-master-deck-provenance-and-how-part-iv-works.md) — The AMIS Deep-Dive Companion — follows.*
+*End of Part III. Part IV — The AMIS Deep-Dive Companion — follows.*
+
+**PART IV**
+
+**The AMIS Deep-Dive Companion**
+
+The AMIS Training Master Deck (Draft, 63 Slides) — Annotated
+
+*Source material credited to Sean Doyle, Justin Mitchell, and Nada Khaled*

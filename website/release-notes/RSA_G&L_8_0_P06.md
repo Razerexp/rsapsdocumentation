@@ -1,7 +1,7 @@
 ---
 title: RSA G&L 8.0 P06
 sidebar_label: v8.0 P06
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 <div className="text--justify">

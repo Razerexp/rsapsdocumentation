@@ -3,10 +3,10 @@ title: "Day 2 Action Items and Follow-Ups"
 sidebar_position: 38
 ---
 
-# Day 2 Action Items and Follow-Ups
+# 38. Day 2 Action Items and Follow-Ups
 
 | \# | Action | Owner | Notes |
-| :--- | :--- | :--- | :--- |
+| :---- | :---- | :---- | :---- |
 | D2-1 | Upload Docker package (including backups) to shared OneDrive | Ramesh | Committed during session; enables consultant feature-testing labs |
 | D2-2 | Assist consultants with first-time Docker lab setup | Hillis / Ramesh | Standing offer; 1–2 hour setup expectation |
 | D2-3 | Verify latest vCloud SecurID template version before consultant lab builds | Jacob / requesting consultants (with Ramesh review) | Templates updated over time; 30-day renewal cycle |

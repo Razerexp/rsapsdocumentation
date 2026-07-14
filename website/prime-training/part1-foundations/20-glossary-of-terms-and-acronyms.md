@@ -3,20 +3,20 @@ title: "Glossary of Terms and Acronyms"
 sidebar_position: 20
 ---
 
-# Glossary of Terms and Acronyms
+# 20. Glossary of Terms and Acronyms
 
 | Term | Definition (as used in this training) |
-| :--- | :--- |
+| :---- | :---- |
 | AM / Authentication Manager | RSA's core on-premises authentication product; primary (read-write) plus replica instances; the back end for all Prime operations |
 | AMS / MS | Authentication Manager Services — Prime's REST services engine and integration hub; 'MS' used interchangeably in session |
 | CAS | Cloud Authentication Service — RSA's cloud MFA/IdP platform; integrated with Prime via OAuth clients |
 | SSP | Self-Service Portal — Prime's end-user web application for enrollment and credential management |
-| HTAP | Help desk / delegated administration portal (third core Prime web application) |
+| HDAP | Help desk / delegated administration portal (third core Prime web application) |
 | PCAP | Prime Central Authentication Portal — on-premises IdP (SAML/OIDC) backed by AM, for customers unable to use CAS |
 | VTS | Virtual Token Service — desktop tokencode generator for users who cannot carry tokens (VDI use case) |
 | ENS / ENS2 | Expiry/Event Notification Service — scheduled email notifications for token/PIN expiry from AM report data |
 | PrimeKit | Self-contained delivery bundle (apps \+ bundled Java \+ bundled Tomcat) replacing separately shipped components |
-| Prime Quick Setup | Interactive provisioning tool (Script 4) that automates AM/CAS back-end configuration; install in &lt;30 minutes |
+| Prime Quick Setup | Interactive provisioning tool (Script 4\) that automates AM/CAS back-end configuration; install in \<30 minutes |
 | WPI / WPA | Windows Password Integration — AM caches the AD password after first login and injects it on subsequent passcode-only logins ('fancy password injection') |
 | Bulk Update | Standalone Java CLI tool: scheduled AD password rotation with WPI cache sync; alias addition; role deletion; CSV-driven modes |
 | Template Builder | Utility that encrypts credentials in Bulk Update configuration files using a symmetric key (which visually resembles a file path) |

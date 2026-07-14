@@ -3,24 +3,24 @@ title: "Day 2 Additions to the Open Questions and Risk Register"
 sidebar_position: 39
 ---
 
-# Day 2 Additions to the Open Questions and Risk Register
+# 39. Day 2 Additions to the Open Questions and Risk Register
 
-The following entries extend the Day 1 register ([Section 23](../part1-foundations/23-open-questions-and-risk-register.md)) with items surfaced on Day 2, numbered continuously.
+The following entries extend the Day 1 register (Section 23\) with items surfaced on Day 2, numbered continuously.
 
-## Open Technical Questions (continued)
+## 39.1 Open Technical Questions (continued)
 
 | \# | Question | Raised By / Context | Status at Close |
-| :--- | :--- | :--- | :--- |
-| OQ-6 | Root cause of the PCAP SAML failure in the Docker environment (identical config works on Linux) | PCAP debug ([Section 33.4](./33-pcap-deep-dive-the-on-premises-identity-portal.md)) | Under investigation; WAR versions patched; Jira filed for missing diagnostics |
-| OQ-7 | Timeline for an official, PS-available Authentication Manager container image | Docker discussion ([Section 30.5](./30-docker-containerization-and-the-prime-development-pipeline.md)) | Exists in engineering; unofficial; no PS availability date |
-| OQ-8 | Any customer requirements beyond RSA 2048-bit certificate keys (e.g., higher-assurance environments)? | Certificate Q&A ([Section 26.4](./26-certificate-management-and-replacement.md)) | No issues known to trainer; check with Hillis/Ben per customer |
-| OQ-9 | Full rationale and vulnerability references for the DH parameters requirement | Certificate discussion ([Section 26.2](./26-certificate-management-and-replacement.md)) | Justin holds context; optional research item |
-| OQ-10 | Notification/monitoring approach for internal (trust, SAML signing) certificate expiry | Restart discussion ([Section 28.2](./28-operational-discipline-restarts-latent-failures-and-silent-expiry.md)) | No mechanism exists today; candidate product enhancement / PS value-add |
+| :---- | :---- | :---- | :---- |
+| OQ-6 | Root cause of the PCAP SAML failure in the Docker environment (identical config works on Linux) | PCAP debug (Section 33.4) | Under investigation; WAR versions patched; Jira filed for missing diagnostics |
+| OQ-7 | Timeline for an official, PS-available Authentication Manager container image | Docker discussion (Section 30.5) | Exists in engineering; unofficial; no PS availability date |
+| OQ-8 | Any customer requirements beyond RSA 2048-bit certificate keys (e.g., higher-assurance environments)? | Certificate Q\&A (Section 26.4) | No issues known to trainer; check with Hillis/Ben per customer |
+| OQ-9 | Full rationale and vulnerability references for the DH parameters requirement | Certificate discussion (Section 26.2) | Justin holds context; optional research item |
+| OQ-10 | Notification/monitoring approach for internal (trust, SAML signing) certificate expiry | Restart discussion (Section 28.2) | No mechanism exists today; candidate product enhancement / PS value-add |
 
-## Delivery Risks and Mitigations (continued)
+## 39.2 Delivery Risks and Mitigations (continued)
 
 | \# | Risk | Impact | Mitigation Discussed |
-| :--- | :--- | :--- | :--- |
+| :---- | :---- | :---- | :---- |
 | R-9 | DH parameters block dropped during certificate replacement | Reintroduced TLS vulnerabilities | Hard rule in runbook: copy DH block on every cert replacement; cheat sheet lives beside the certs |
 | R-10 | Restart surfaces latent failures (expired internal certs, old syntax errors) during a planned change window | Outage misattributed to the change; extended windows | Two-step restart pattern: restart clean first, triage, then change |
 | R-11 | Silent expiry of trust / SAML signing certificates | Unpredictable auth failures with no warning | Track internal cert expiry dates per engagement; see OQ-10 for a durable fix |
