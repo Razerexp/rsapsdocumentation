@@ -57,7 +57,6 @@ The Workflow Rollback feature enables users to restore a workflow to a previousl
 
 Rollback allows users to select a prior version of a workflow and restore it as the current working version. Upon execution, the system replaces the existing workflow configuration with the selected version.
 
-> [!NOTE]
 > See the Known Issues section for workarounds related to known issues in the Workflow Rollback feature.
 
 ## New Features
@@ -118,10 +117,10 @@ Rollback allows users to select a prior version of a workflow and restore it as 
 
 ## Known Issues
 
-| Reference | Description |
-| :--- | :--- |
-| [ACM-139155](https://rsa.atlassian.net/browse/ACM-139155) | **Issue:** After rolling back a Workflow, the selected workflow form is not retained. The form type changes to Default Approval Form instead of Rollback Versioned Form. For rollback-saved workflows, the activity form may appear as Default Approval Form under Requests > Approvals or Activities tab instead of the configured Rollback Versioned Form. <br/><br/>**Workaround:** After performing a workflow rollback but prior to saving the rolled-back workflow, do the following: <br/>1. Manually review and document the forms configured for the Approval and Fulfillment nodes (for example, record the node-to-form mappings) before proceeding. <br/>2. Save the rolled-back workflow. <br/>3. Reconfigure the documented forms for the respective nodes before using the rolled-back workflow version. <br/><br/>*Note: Since the rollback operation does not retain the configured workflow forms, users must manually record the node-to-form mappings prior to saving the workflow so that the same configuration can be restored afterward.* |
-| [ACM-139014](https://rsa.atlassian.net/browse/ACM-139014) | **Issue:** During Workflow rollback, workflow and email content may not be restored correctly. Workflow state is not auto-saved after rollback, the email content may become empty when rolling back to the default version, and version updates may impact all instances sharing the same version instead of only the targeted instance. <br/><br/>**Workaround:** After rollback, perform the following: <br/>1. Save the workflow (manually). <br/>2. Re-enter email content/templates, if required. <br/>3. Verify workflow content and associated data. <br/>4. Update versions individually per instance. <br/>5. Perform an end-to-end validation before publishing. |
+| Issue ID | Description | Workaround |
+| :--- | :--- | :--- |
+| [ACM-139155](https://rsa.atlassian.net/browse/ACM-139155) | After rolling back a Workflow, the selected workflow form is not retained. The form type changes to Default Approval Form instead of Rollback Versioned Form. For rollback-saved workflows, the activity form may appear as Default Approval Form under Requests > Approvals or Activities tab instead of the configured Rollback Versioned Form. | After performing a workflow rollback but prior to saving the rolled-back workflow, do the following: <br/>1. Manually review and document the forms configured for the Approval and Fulfillment nodes (for example, record the node-to-form mappings) before proceeding. <br/>2. Save the rolled-back workflow. <br/>3. Reconfigure the documented forms for the respective nodes before using the rolled-back workflow version. <br/><br/>*Note: Since the rollback operation does not retain the configured workflow forms, users must manually record the node-to-form mappings prior to saving the workflow so that the same configuration can be restored afterward.* |
+| [ACM-139014](https://rsa.atlassian.net/browse/ACM-139014) | During Workflow rollback, workflow and email content may not be restored correctly. Workflow state is not auto-saved after rollback, the email content may become empty when rolling back to the default version, and version updates may impact all instances sharing the same version instead of only the targeted instance. | After rollback, perform the following: <br/>1. Save the workflow (manually). <br/>2. Re-enter email content/templates, if required. <br/>3. Verify workflow content and associated data. <br/>4. Update versions individually per instance. <br/>5. Perform an end-to-end validation before publishing. |
 
 ## Platform Matrix
 
