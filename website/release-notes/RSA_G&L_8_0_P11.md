@@ -28,8 +28,8 @@ The new user interface introduced earlier to RSA Governance & Lifecycle is now a
 
 #### Home Page
 Once you log into RSA G&L, there are two tabs displayed for the Homepage details:
-* **Home:** displays the data in the new UI.
-* **Home Classic:** displays data in the old UI.
+* **Home:** Displays the data in the new UI.
+* **Home Classic:** Displays data in the old UI.
 
 There is no custom flag to configure in order to display the UI you want. Both are introduced on your landing page by default under two different tabs.
 
@@ -119,8 +119,8 @@ Rollback allows users to select a prior version of a workflow and restore it as 
 
 | Issue ID | Description | Workaround |
 | :--- | :--- | :--- |
-| [ACM-139155](https://rsa.atlassian.net/browse/ACM-139155) | After rolling back a Workflow, the selected workflow form is not retained. The form type changes to Default Approval Form instead of Rollback Versioned Form. For rollback-saved workflows, the activity form may appear as Default Approval Form under Requests > Approvals or Activities tab instead of the configured Rollback Versioned Form. | After performing a workflow rollback but prior to saving the rolled-back workflow, do the following: <br/>1. Manually review and document the forms configured for the Approval and Fulfillment nodes (for example, record the node-to-form mappings) before proceeding. <br/>2. Save the rolled-back workflow. <br/>3. Reconfigure the documented forms for the respective nodes before using the rolled-back workflow version. <br/><br/>*Note: Since the rollback operation does not retain the configured workflow forms, users must manually record the node-to-form mappings prior to saving the workflow so that the same configuration can be restored afterward.* |
-| [ACM-139014](https://rsa.atlassian.net/browse/ACM-139014) | During Workflow rollback, workflow and email content may not be restored correctly. Workflow state is not auto-saved after rollback, the email content may become empty when rolling back to the default version, and version updates may impact all instances sharing the same version instead of only the targeted instance. | After rollback, perform the following: <br/>1. Save the workflow (manually). <br/>2. Re-enter email content/templates, if required. <br/>3. Verify workflow content and associated data. <br/>4. Update versions individually per instance. <br/>5. Perform an end-to-end validation before publishing. |
+| **[ACM-139155](https://rsa.atlassian.net/browse/ACM-139155)** | After rolling back a Workflow, the selected workflow form is not retained. The form type changes to Default Approval Form instead of Rollback Versioned Form. For rollback-saved workflows, the activity form may appear as Default Approval Form under Requests > Approvals or Activities tab instead of the configured Rollback Versioned Form. | After performing a workflow rollback but prior to saving the rolled-back workflow, do the following: <br/>1. Manually review and document the forms configured for the Approval and Fulfillment nodes (for example, record the node-to-form mappings) before proceeding. <br/>2. Save the rolled-back workflow. <br/>3. Reconfigure the documented forms for the respective nodes before using the rolled-back workflow version. <br/><br/>*Since the rollback operation does not retain the configured workflow forms, users must manually record the node-to-form mappings prior to saving the workflow so that the same configuration can be restored afterward.* |
+| **[ACM-139014](https://rsa.atlassian.net/browse/ACM-139014)** | During Workflow rollback, workflow and email content may not be restored correctly. Workflow state is not auto-saved after rollback, the email content may become empty when rolling back to the default version, and version updates may impact all instances sharing the same version instead of only the targeted instance. | After rollback, perform the following: <br/>1. Save the workflow (manually). <br/>2. Re-enter email content/templates, if required. <br/>3. Verify workflow content and associated data. <br/>4. Update versions individually per instance. <br/>5. Perform an end-to-end validation before publishing. |
 
 ## Platform Matrix
 
@@ -144,8 +144,7 @@ The latest application server and JDK version are certified for this release.
 
 ## Prerequisites for Applying Patch (v8.0 P07 or Later)
 
-> [!NOTE]
-> In case you are upgrading directly to P10 from patch P06 or earlier, you must perform the following procedure.
+> In case you are upgrading directly to P11 from patch P06 or earlier, you must perform the following procedure.
 
 When using a customer-supplied Oracle Database, or RSA-Supplied Database installed remotely, update the AVUSER and AVCSUSER schema as follows:
 

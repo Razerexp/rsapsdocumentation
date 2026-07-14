@@ -110,6 +110,8 @@ The latest application server and JDK version have been certified for this relea
 
 ## Prerequisites for Applying Patch (v8.0 P07 or Later)
 
+> In case you are upgrading directly to P19 from patch P06 or earlier, you must perform the following procedure.
+
 When using a customer-supplied Oracle Database, or RSA-Supplied Database installed remotely, update the AVUSER and AVCSUSER schema as follows:
 
 1.  Log in as **SYS** user (or another user with **SYSDBA** privilege) in SQLPLUS (or another database tool like SQL Developer).

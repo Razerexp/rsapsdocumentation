@@ -133,7 +133,7 @@ The latest application server and JDK version are certified for this release.
 
 ## Prerequisites for Applying Patch (v8.0 P07 or Later)
 
-Note: In case you are upgrading directly to P10 from patch P06 or earlier, you must perform the following procedure.
+> In case you are upgrading directly to P10 from patch P06 or earlier, you must perform the following procedure.
 
 When using a customer-supplied Oracle Database, or RSA-Supplied Database installed remotely, update the AVUSER and AVCSUSER schema as follows:
 
