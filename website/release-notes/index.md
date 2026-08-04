@@ -9,7 +9,7 @@ sidebar_position: 0
 Welcome to the Release Notes section. Here you will find detailed information about updates and patches for RSA Governance & Lifecycle.
 
 ## Latest Release
-*   [RSA G&L 8.0 P11](./RSA_G&L_8_0_P11.md)
+*   [RSA G&L 8.0 P11 HF01](./RSA_G&L_8_0_P11_HF01.md)
 
 ## Archive
 *   [RSA G&L 8.0 P10](./RSA_G&L_8_0_P10.md)

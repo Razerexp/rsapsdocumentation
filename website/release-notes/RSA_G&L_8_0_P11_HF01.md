@@ -1,22 +1,24 @@
 ---
-title: RSA G&L 8.0 P11
-sidebar_label: v8.0 P11
+title: RSA G&L 8.0 P11 HF01
+sidebar_label: v8.0 P11 HF01
 sidebar_position: 1
 ---
 
 <div className="text--justify">
 
-# RSA Governance & Lifecycle 8.0 Patch 11
+# RSA Governance & Lifecycle 8.0 Patch 11 HF01 Release Notes
 
-**Release Date:** 2026-07-14  
-**Version:** 8.0.0 P11
+**Release Date:** August 2026  
+**Version:** 8.0 P11 HF01
+
+> Note: RSA Governance & Lifecycle version 8.0.0 P11 HF01 is a replacement for 8.0.0 P11, it is designed to deliver a seamless installation experience and optimized performance for environments with large datasets of shared review items. To ensure the upgrade path, P11 HF01 supersedes the previous P11 release on the RSA Community portal and can be applied directly to previous patch levels of version 8.0.0, including systems currently running P11.
 
 ## Executive Summary
-RSA Governance & Lifecycle version 8.0.0 P11 introduces features designed to enhance system efficiency, automate key tasks, and improve visibility. With updates like Joiner Mover Advisor (JMA), New User Interface (Home page and Reviews), Oracle Database 19c Multitenant, and Workflow Rollback, this release reduces manual intervention, optimizes performance, and bolsters security.
+RSA Governance & Lifecycle version 8.0.0 P11 HF01 introduces features designed to enhance system efficiency, automate key tasks, and improve visibility. With updates like Joiner Mover Advisor (JMA), New User Interface (Home page and Reviews), Oracle Database 19c Multitenant, and Workflow Rollback, this release reduces manual intervention, optimizes performance, and bolsters security.
 
 ## Highlighted Features
 
-This section highlights the most significant and vital features introduced in RSA Governance & Lifecycle 8.0.0 Patch 11 Release.
+This section highlights the most significant and vital features introduced in RSA Governance & Lifecycle 8.0.0 Patch 11 HF01 Release.
 
 ### Joiner Mover Advisor (JMA)
 The AI-powered Joiner Mover Advisor (JMA) feature provides visibility into users with enhanced access patterns and groups users based on their entitlements or access. This feature organizes/groups users into Clusters, helping manage the large number of users, entitlements, roles, and groups handled in RSA Governance & Lifecycle.
@@ -88,9 +90,18 @@ Rollback allows users to select a prior version of a workflow and restore it as 
 | - | [ACM-137615](https://rsa.atlassian.net/browse/ACM-137615) | **AWR Report retention period:** AWR Report retention period in G&L Cloud is increased to 90 days (instead of 8) to ensure availability of historical data for extended troubleshooting and analysis. |
 | - | [ACM-137327](https://rsa.atlassian.net/browse/ACM-137327) | **Collector metadata import warning:** A warning message is displayed after importing any Collector metadata file, in case there are no matching security key files. |
 | - | [ACM-137238](https://rsa.atlassian.net/browse/ACM-137238) | **Remote Agent version/build fields:** Two new fields, version and build, have been added to the Remote Agent's `conf/config.properties` file to show the version and build of the agent. |
+| - | [ACM-137208](https://rsa.atlassian.net/browse/ACM-137208) | **AFX Server Logging:** AFX Server logging has been improved to include information about the system and whether the AFX was started as a service or from a startup script. |
+| - | [ACM-137100](https://rsa.atlassian.net/browse/ACM-137100),<br/>[ACM-137099](https://rsa.atlassian.net/browse/ACM-137099) | **Pagination Behavior:** The Pagination behavior for APIs in Generic REST based IDC, ADC, and EDC now supports proper handling of dynamic tokens. The response token is now correctly passed in subsequent requests and included in the next URL to fetch the next set of records. |
 | - | [ACM-136829](https://rsa.atlassian.net/browse/ACM-136829) | **Agent Status Label:** The label Is Running (Yes/No) is changed to Status (Connected/Disconnected) for agents on the **UI > Collectors > Agents** page. |
 | - | [ACM-135836](https://rsa.atlassian.net/browse/ACM-135836) | **IDPlus Application configuration wizard:** IDPlus Application configuration wizard now automatically fills in values for key fields, such as IDPlus Lookup Api, Base URL, User Authentication Type, Client ID, Client Secret, Authentication URL, Access Token URL, etc. |
 | - | [ACM-135060](https://rsa.atlassian.net/browse/ACM-135060) | **Change Approval View-only access:** Access Request Administrator, Application Administrator, Data Access Administrator, Directory Administrator, Role Administrator, and Rule Administrator roles will have Change Approval View-only access instead of Edit access. |
+
+## Fixed Issues in P11 HF01
+
+| Issue ID | Reference | Description |
+| :--- | :--- | :--- |
+| **SF-02783300** | [ACM-141317](https://rsa.atlassian.net/browse/ACM-141317) | The migration script is modified so that it now runs successfully during patch re-installation; showing no errors. |
+| **SF-02783645** | [ACM-141310](https://rsa.atlassian.net/browse/ACM-141310) | Review Components performance is enhanced; the migration script now runs successfully. |
 
 ## Fixed Issues
 
@@ -144,7 +155,7 @@ The latest application server and JDK version are certified for this release.
 
 ## Prerequisites for Applying Patch (v8.0 P07 or Later)
 
-> In case you are upgrading directly to P11 from patch P06 or earlier, you must perform the following procedure.
+> In case you are upgrading directly to P11 HF01 from patch P06 or earlier, you must perform the following procedure.
 
 When using a customer-supplied Oracle Database, or RSA-Supplied Database installed remotely, update the AVUSER and AVCSUSER schema as follows:
 
