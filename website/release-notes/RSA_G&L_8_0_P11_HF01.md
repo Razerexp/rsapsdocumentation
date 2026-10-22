@@ -1,7 +1,7 @@
 ---
 title: RSA G&L 8.0 P11 HF01
 sidebar_label: v8.0 P11 HF01
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 <div className="text--justify">
@@ -11,7 +11,7 @@ sidebar_position: 1
 **Release Date:** August 2026  
 **Version:** 8.0 P11 HF01
 
-> Note: RSA Governance & Lifecycle version 8.0.0 P11 HF01 is a replacement for 8.0.0 P11, it is designed to deliver a seamless installation experience and optimized performance for environments with large datasets of shared review items. To ensure the upgrade path, P11 HF01 supersedes the previous P11 release on the RSA Community portal and can be applied directly to previous patch levels of version 8.0.0, including systems currently running P11.
+> RSA Governance & Lifecycle version 8.0.0 P11 HF01 is a replacement for 8.0.0 P11, it is designed to deliver a seamless installation experience and optimized performance for environments with large datasets of shared review items. To ensure the upgrade path, P11 HF01 supersedes the previous P11 release on the RSA Community portal and can be applied directly to previous patch levels of version 8.0.0, including systems currently running P11.
 
 ## Executive Summary
 RSA Governance & Lifecycle version 8.0.0 P11 HF01 introduces features designed to enhance system efficiency, automate key tasks, and improve visibility. With updates like Joiner Mover Advisor (JMA), New User Interface (Home page and Reviews), Oracle Database 19c Multitenant, and Workflow Rollback, this release reduces manual intervention, optimizes performance, and bolsters security.
@@ -203,7 +203,7 @@ Ensure the following:
 Once all the pre-requisites are completed as described above, start the RSA Governance & Lifecycle services.
 
 ## RSA Governance & Lifecycle Product Version Lifecycle
-RSA has a defined End of Primary Support policy associated with all major versions. For more details, please refer to the Product Version Life Cycle for RSA Governance & Lifecycle.
+RSA has a defined End of Primary Support policy associated with all major versions. For more details, please refer to the [Product Version Life Cycle for RSA Governance & Lifecycle](https://community.rsa.com/s/news/product-version-life-cycle-for-rsa-governance-lifecycle-MC2LX56UYE5ZC27FM6QZLQHO2Q5Y).
 
 As of RSA Governance & Lifecycle v8.0.0 P08, RSA G&L v7.5.2 is now EOPS.
 

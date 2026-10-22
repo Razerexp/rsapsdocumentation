@@ -1,7 +1,7 @@
 ---
 title: RSA G&L 8.0 P10
 sidebar_label: v8.0 P10
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 <div className="text--justify">
@@ -181,7 +181,7 @@ Assure the following:
 Once all the pre-requisites are completed as described above, start the RSA Governance & Lifecycle services.
 
 ## RSA Governance & Lifecycle Product Version Lifecycle
-RSA has a defined End of Primary Support policy associated with all major versions. For more details, please refer to the Product Version Life Cycle for RSA Governance & Lifecycle.
+RSA has a defined End of Primary Support policy associated with all major versions. For more details, please refer to the [Product Version Life Cycle for RSA Governance & Lifecycle](https://community.rsa.com/s/news/product-version-life-cycle-for-rsa-governance-lifecycle-MC2LX56UYE5ZC27FM6QZLQHO2Q5Y).
 
 As of RSA Governance & Lifecycle v8.0.0 P08, RSA G&L v7.5.2 is now EOPS.
 

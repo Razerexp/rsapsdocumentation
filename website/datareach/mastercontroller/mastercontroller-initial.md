@@ -92,4 +92,4 @@ Create a temporary directory `/tmp/DRbinaries/` and upload the following DataRea
 
 **Step 2: Stage License File**
 
-Ensure you have the valid license file required to run the application. Upload the `license.properties` file to the server as well. You will need to move this to the installation directory in later steps.
+Ensure you have the valid license file required to run the application. Upload the `license.properties` file to the directory `/tmp/DRbinaries/` as well. You will need to move this to the installation directory in later steps.

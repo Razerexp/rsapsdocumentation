@@ -95,8 +95,4 @@ Once configuration preparation is done on the Mastercontroller, download/stage t
 - **Agent Distribution**: `Agent_<Platform>_<Version>.<extension>` (e.g. `Agent_Linux_<Version>.tar.gz` or `Agent_Windows_<Version>.zip`)
 - **Job Definitions**: `Agent_Job_<Type>_<Version>.tar.gz` (e.g. `Agent_Job_UNIX_<Version>.tar.gz` or `Agent_Job_Database_<Version>.tar.gz`)
 
-Transfer these files to the target remote agent host and complete the installation using the appropriate platform guide:
-- [Remote Unix Agent Configuration](./remote-agents/remote-linux.md)
-- [Remote Oracle Agent Configuration](./remote-agents/remote-oracle.md)
-- [Remote Oracle 11g Agent Configuration](./remote-agents/remote-oracle11.md)
-- [Remote MSSQL Agent Configuration](./remote-agents/remote-mssql.md)
+Transfer these files to the target remote agent host and complete the installation and service startup for your respective platform (e.g., Linux, Oracle, or MSSQL).

@@ -1,7 +1,7 @@
 ---
 title: RSA G&L 8.0 P08
 sidebar_label: v8.0 P08
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 <div className="text--justify">
@@ -199,5 +199,10 @@ Assure the following:
 | libXtst-1.2.3-16.el9.x86_64 | |
 
 Once all the prerequisites have been completed as described above, start RSA Governance & Lifecycle Services.
+
+## RSA Governance & Lifecycle Product Version Lifecycle
+RSA has a defined End of Primary Support policy associated with all major versions. For more details, please refer to the [Product Version Life Cycle for RSA Governance & Lifecycle](https://community.rsa.com/s/news/product-version-life-cycle-for-rsa-governance-lifecycle-MC2LX56UYE5ZC27FM6QZLQHO2Q5Y).
+
+As of RSA Governance & Lifecycle v8.0.0 P08, RSA G&L v7.5.2 is now EOPS.
 
 </div>
